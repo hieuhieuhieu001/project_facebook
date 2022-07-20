@@ -2,9 +2,25 @@
 
 }
 #header{
-    width: 1920px;
-    height: ;
+    width: auto;
+    height: auto;
+    float: left;
+    background-color: gray;
 }
-#header>img{
+
+#header {
+    
+}
+
+.background_icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: gray;
+}
+.background_icon>i{
+    font-size: 20px;
+    margin: 10px;
+    color: white;
     float: left;
 }
