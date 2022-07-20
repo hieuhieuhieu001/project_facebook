@@ -1,26 +1,87 @@
-*{
-
+body{
+    margin: 0;
+    padding: 0;
 }
+
 #header{
-    width: auto;
-    height: auto;
+    width: 1350px;
+    height: 60px;
     float: left;
-    background-color: gray;
+    background-color: #252628;
+}
+#header i{
+    font-size: 35px;
+    color: white;
 }
 
-#header {
+#search{
+
+}
+#facebook_icon{
+    float: left;
+    padding: 10px;
+}
+#facebook_icon > i{
+    color: #1895f2;
+}
+#search_icon{
+    float: left;
+    padding: 10px;
+}
+#search_icon > input{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #3b3c3e;
+}
+
+#home{
     
 }
-
-.background_icon{
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-    background-color: gray;
+.home_background_icon{
+    float: right;
+    padding: 10px;
 }
-.background_icon>i{
-    font-size: 20px;
-    margin: 10px;
-    color: white;
+
+#chucnang{
+    margin-left: 500px;
+    
+}
+.background_icon{
+    float: left;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+#main{
+    width: 1360px;
     float: left;
 }
+
+#nav1{
+    width: 350px;
+    height: 600px;
+    background-color: aqua;
+    float: left;
+}
+#content{
+    width: 645px;
+    height: 600px;
+    background-color: aquamarine;
+    float: left;
+}
+#nav2{
+    width: 350px;
+    height: 600px;
+    background-color: aqua;
+    float: left;
+}
+#footer{
+    width: 1350px;
+    height: 100px;
+    background-color: #3b3c3e;
+    float: left;
+}
+
+
