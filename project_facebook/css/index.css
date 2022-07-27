@@ -4,143 +4,80 @@
     padding: 0;
 }
 .swap{
-    position: relative;
+    position: static;
+    z-index: 1;
+
 }
-/* đầu trang */
 .header{
-    width: 100%;
-    height: 60px;
+    background-color: #252628;
+    position: static;
+    z-index: 1;
+}
+.p361ku9c{
+    fill: white;
+}
+.header > .navbar{
     position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    z-index: 10;
-    background-color: #252628;
+    /*top: 0px;*/
+    /*left: 0px;*/
+    /*right: 0px;*/
 }
-/* search */
-.search-bar{
-    width: 25%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-}
-.search-bar > .logo > img{
-   width: 70%;
-   height: auto;
-   position: absolute;
-   top: 5px;
-   left: 10px;
-}
-.search-bar > .logo{
-    width: 20%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-}
-.search-bar > .search > input{
-    width: 65%;
-    border-radius: 30px;
-    position: absolute;
-    top: 10px;
-    left: 20%;
-    bottom: 10px;
-}
-/* nút điều khiển trang chủ */
-.home{
-    position: absolute;
-    top: 0;
-    left: 25%;
-    right: 25%;
-    bottom: 0;
-    display: flex;
-}
-.home > .bg-home{
-    width: 20%;
-}
-.home > .bg-home > button{
-    width: 95%;
-    height: 80%;
-    text-align: center;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-size: 30px;
-    background-color: #252628;
-    margin-top: 3%;
-    margin-left: 5%;
-}
-.home > .bg-home > button:hover{
-    background-color: #3a3b3c;
-}
-/* user */
-.user{
-    width: 25%;
-    position: absolute;
-    top: 0;
-    left: 75%;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: right;
-}
-.user > .bg-user{
-    width: 15%;
-}
-.user > .bg-user > button{
-    width: 95%;
-    height: 80%;
-    text-align: center;
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 30px;
-    background-color: #3a3b3c;
-    margin-top: 5px;
-}
-.user > .bg-user > button > img{
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-.user > .bg-user > button:hover{
-    background-color: #474747;
-}
-/* border */
+
 #main{
-    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 }
-/* NAV trái */
+.scrollbar {
+    background-color: #F5F5F5;
+    float: left;
+    height: 300px;
+    margin-bottom: 25px;
+    margin-left: 22px;
+    margin-top: 40px;
+    width:370px;
+    overflow-y: scroll;
+}
+
+.force-overflow {
+    min-height: 450px;
+}
 #nav1{
     width: 25%;
-    background-color: aqua;
+    height: 800px;
+    background-color: white;
     position: fixed;
     top: 60px;
-    left: 0;
-    bottom: 0;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background: lightgray;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: grey;
+  border-radius: 5px;
 }
 /* content */
 #content{
     width: 50%;
+    height: 800px;
+    background-color: rgb(90, 160, 139);
     position: absolute;
     top: 60px;
     left: 25%;
-    bottom: 0;
 }
 /* css from đăng bài */
 .from-dangbai{
     border-radius: 10px;
     background-color: #3a3b3c;
     width: 90%;
-    margin: auto;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    /*margin:10px ;*/
+    /*margin-bottom: 10px;*/
+    /*margin-top: 10px;*/
     padding: 10px;
 }
 .from-dangbai > hr{
@@ -165,31 +102,23 @@
     color: white;
     background-color: #252628;
 }
-/* friend list */
-.friend-list{
-    position: absolute;
-    left: 0;
-    right: 0;
-}
 #carouselExampleControls{
     width: 90%;
-    position: absolute;
-    left: 5%;
-    right: 5%;
+    margin: auto;
 }
+/* friend list */
 .multy-card{
     display: flex;
 }
 .multy-card > .card{
-    width: 33%;
     margin-right: 5px;
 }
 /* from bài viết */
 .main-content{
     position: absolute;
-    top: 640px;
-    left: 0;
-    right: 0;
+    top: 630px;
+    /*left: 0px;*/
+    /*right: 0px;*/
 }
 .main-content > .card{
     background-color: #3a3b3c;
@@ -203,12 +132,255 @@
     margin-left: 10px;
 }
 
-/* Navbar phải */
+/* Navbar right */
 #nav2{
     width: 25%;
+    height: 800px;
     background-color: aqua;
     position: fixed;
     left: 75%;
     top: 60px;
-    bottom: 0;
 }
+.nav1{
+    display: flex;
+}
+#header-left{
+    display: flex;
+}
+.icon{
+    height: 36px;
+    width: 36px;
+
+}
+.icon-reset-div{
+    width: 45px;
+    height: 45px;
+    margin-left:30px;
+    margin-top: 5px;
+}
+.search-div{
+    margin-top: 13px;
+    margin-left: 10px;
+    line-height: 10px;
+}
+.icon-reset{
+    height: 45px;
+    width: 45px;
+}
+.avatar-profile{
+    display: flex;
+    padding-left: 30px;
+}
+.username{
+    padding-left: 45px;
+}
+.avatar{
+    height: 40px;
+    width: 40px;
+}
+.text-icon{
+    padding-left: 45px;
+}
+.friends{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.messenger{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.saved{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.group{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.Marketplace{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.fundraising-campaign{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.play-game{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.facebook-pay{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.most-recent{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.blood-donation{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.events{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.emotional-health{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.pages{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.ad-manager{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.climate-science-center{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.ad-center{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.emergency-response{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.video-play-game{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.video-live{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.watch{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.favorites{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.icon-marketplace{
+    width: 36px;
+    height: 36px;
+
+}
+.icon-fundraising-campaign{
+    width: 36px;
+    height: 36px;
+}
+.icon-play-game{
+    width: 36px;
+    height: 36px;
+}
+.icon-facebook-pay{
+    width: 36px;
+    height: 36px;
+}
+.icon-most-recent{
+    width: 36px;
+    height: 36px;
+}
+.icon-blood-donation{
+    width: 36px;
+    height: 36px;
+}
+.icon-blood-donation{
+    width: 36px;
+    height: 36px;
+}
+.icon-events{
+    width: 36px;
+    height: 36px;
+}
+.icon-emotional-health{
+    width: 36px;
+    height: 36px;
+}
+.icon-pages{
+    width: 36px;
+    height: 36px;
+}
+.icon-ad-manager{
+    width: 36px;
+    height: 36px;
+}
+.icon-climate-science-center{
+    width: 36px;
+    height: 36px;
+}
+.icon-ad-center{
+    width: 36px;
+    height: 36px;
+}
+.icon-emergency-response{
+    width: 36px;
+    height: 36px;
+}
+.icon-video-play-game{
+    width: 36px;
+    height: 36px;
+}
+.icon-video-live{
+    width: 36px;
+    height: 36px;
+}
+.icon-watch{
+    width: 36px;
+    height: 36px;
+}
+.icon-favorites{
+    width: 36px;
+    height: 36px;
+}
+#more{
+    display: none;
+}
+
