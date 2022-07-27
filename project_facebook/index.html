@@ -5,60 +5,195 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a5fd4c580f.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css\index.css">
-    <title>Document</title>
+    <script src="js.js"></script>
+    <title>facebook</title>
+    <!--    <script src="index.js"></script>-->
 </head>
 <body>
-    <!-- home page -->
-    <div class="swap">
-        <!-- header -->
-        <div class="header">
-          <div class="search-bar">
-            <div class="logo">
-              <img src="\img\facebook_logo_icon.png" alt="">
-            </div>
-            <div class="search">
-              <input type="text" placeholder=" Tìm kiếm trên facebook">
-            </div>
-          </div>
-          <div class="home">
-            <div class="bg-home">
-              <button><i class="fa-solid fa-house"></i></button>
-            </div>
-            <div class="bg-home">
-              <button><i class="fa-solid fa-tv"></i></button>
-            </div>
-            <div class="bg-home">
-              <button><i class="fa-solid fa-store"></i></button>
-            </div>
-            <div class="bg-home">
-              <button><i class="fa-solid fa-users"></i></button>
-            </div>
-            <div class="bg-home">
-              <button><i class="fa-solid fa-gamepad"></i></button>
-            </div>
-          </div>
-          <div class="user">
-            <div class="bg-user">
-              <button><i class="fa-solid fa-bars"></i></button>
-            </div>
-            <div class="bg-user">
-              <button><i class="fa-brands fa-facebook-messenger"></i></button>
-            </div>
-            <div class="bg-user">
-              <button><i class="fa-solid fa-bell"></i></button>
-            </div>
-            <div class="bg-user">
-              <button id="bt-user" onclick="myFuction()"><img src="\img\userCarrd.jpg" alt=""></button>
-            </div>
-          </div>
+<!-- home page -->
+<div class="swap">
+    <!-- header -->
+    <div id="header-left">
+        <div class="icon-reset-div">
+            <!--            <img class="icon-reset"-->
+            <!--                 src="data:image/jpeg;base64,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">-->
+            <a aria-hidden="false" aria-label="Facebook"
+               class="oajrlxb2 gs1a9yip g5ia77u1 mtkw9kbi tlpljxtp qensuy8j ppp5ayq2 goun2846 ccm00jje s44p3ltw mk2mc5f4 rt8b4zig n8ej3o3l agehan2d sk4xxmp2 rq0escxv nhd2j8a9 mg4g778l pfnyh3mw p7hjln8o kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x tgvbjcpo hpfvmrgz jb3vyjys rz4wbd8a qt6c0cv9 a8nywdso l9j0dhe7 i1ao9s8h esuyzwwr f1sip0of du4w35lb n00je7tq arfg74bv qs9ysxi8 k77z8yql btwxx1t3 abiwlrkh p8dawk7l q9uorilb lzcic4wl pedkr2u6 ms05siws pnx7fd3z nf1dmkjp"
+               href="/" role="link" tabindex="0">
+                <svg viewBox="0 0 36 36" class="a8c37x1j ms05siws l3qrxjdp b7h9ocf4" fill="url(#jsc_s_2)" height="40"
+                     width="40">
+                    <defs>
+                        <linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="jsc_s_2">
+                            <stop offset="0%" stop-color="#0062E0"></stop>
+                            <stop offset="100%" stop-color="#19AFFF"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"></path>
+                    <path class="p361ku9c"
+                          d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"></path>
+                </svg>
+            </a>
+            <path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"></path>
+            <path class="p361ku9c"
+                  d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"></path>
+
         </div>
-        <!-- conten & nav -->
+        <div class="search-div">
+            <div class="search-text">
+                <label>
+                    <span class="icon-search"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <input type="text" class="search-area" id="search-area" placeholder="search" name="search">
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- content & nav -->
+
+    <div>
         <div id="main">
             <!-- nav left -->
             <div id="nav1">
-                nội dung bên trái
+                <div class="avatar-profile">
+                    <div><img class="avatar"
+                              src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-1/275821209_1537433039972844_6085414064181875256_n.jpg?stp=dst-jpg_p100x100&_nc_cat=104&ccb=1-7&_nc_sid=7206a8&_nc_ohc=uQ9YGDGRolwAX960-7o&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fhan2-4.fna&oh=00_AT-ffca_MuxM-e0mqxCXE7ALuOa33zvIsrKhzRNTS-rJxQ&oe=62E3E07B"
+                              alt=""></div>
+                    <div class="username"><label>profile</label></div>
+                </div>
+                <div class="icon">
+                    <ul>
+                        <li class="friends">
+                            <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt=""></div>
+                            <div class="text-icon"><label>friend</label></div>
+                        </li>
+                        <li class="messenger">
+                            <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/YF1bztyGuX-.png"
+                                      alt=""></div>
+                            <div class="text-icon"><label>Messenger</label></div>
+                        </li>
+                        <li class="saved">
+                            <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/2uPlV4oORjU.png"
+                                      alt=""></div>
+                            <div class="text-icon"><label>saved</label></div>
+                        </li>
+                        <li class="group">
+                            <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png"
+                                      alt=""></div>
+                            <div class="text-icon"><label>groups</label></div>
+                        </li>
+                        <li class="Marketplace">
+                            <div><img class="icon-marketplace"
+                                      src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/9BDqQflVfXI.png" alt=""></div>
+                            <div class="text-icon"><label>Marketplace</label></div>
+                        </li>
+<!--                      <span id="dots">.....</span>-->
+                        <div id="see-more">
+                            <li class="fundraising-campaign" id="fundraising-campaign">
+                                <div><img class="icon-fundraising-campaign"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/A2tHTy6ibgT.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>fundraising campaign</label></div>
+                            </li>
+                            <li class="play-game" id="play-game">
+                                <div><img class="icon-play-game"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/XEWvxf1LQAG.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>play-game</label></div>
+                            </li>
+                            <li class="facebook-pay" id=facebook-pay">
+                                <div><img class="icon-facebook-pay"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/xH4w-lk44we.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>facebook-face</label></div>
+                            </li>
+                            <li class="most-recent" id="most-recent">
+                                <div><img class="icon-most-recent"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/3dN1QwOLden.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>most recent</label></div>
+                            </li>
+                            <li class="blood-donation" id="blood-donation">
+                                <div><img class="icon-blood-donation"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/9LIH24rbn9J.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>blood-donation</label></div>
+                            </li>
+                            <li class="events" id="events">
+                                <div><img class="icon-events"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/XXwl2m1vjqM.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>events</label></div>
+                            </li>
+                            <li class="emotional-health" id="emotional-health">
+                                <div><img class="icon-emotional-health"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/GyZZ7Jrr5OV.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>emotional-health</label></div>
+                            </li>
+                            <li class="pages" id="pages">
+                                <div><img class="icon-pages"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>pages</label></div>
+                            </li>
+                            <li class="ad-manager" id=" ad-manager" x>
+                                <div><img class="icon-ad-manager"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/qR88GIDM38e.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>ad-manager</label></div>
+                            <li class="climate-science-center" id="climate-science-center">
+                                <div><img class="icon-climate-science-center"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/tKwWVioirmj.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>climate-science-center</label></div>
+                            </li>
+                            <li class="ad-center" id="ad-center">
+                                <div><img class="icon-ad-center"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/_JPdPzLmp9j.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>ad-center</label></div>
+                            </li>
+                            <li class="emergency-response" id="emergency-response">
+                                <div><img class="icon-emergency-response"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/y7p-dcTnGV_.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>emergency-response</label></div>
+                            </li>
+                            <li class="video-play-game" id="video-play-game">
+                                <div><img class="icon-video-play-game"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/eVgQ0NIygAW.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>video-play-game</label></div>
+                            </li>
+                            <li class="video-live" id="video-live">
+                                <div><img class="icon-video-live"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/GmeV2VDbZTi.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>video-live</label></div>
+                            </li>
+                            <li class="watch" id="watch">
+                                <div><img class="icon-watch"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>watch</label></div>
+                            </li>
+                            <li class="favorites" id=favorites">
+                                <div><img class="icon-favorites"
+                                          src="https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/Zy9sJGThmCS.png" alt="">
+                                </div>
+                                <div class="text-icon"><label>favorites</label></div>
+                            </li>
+                        </div>
+                    </ul>
+                    <button onclick="readmore()" id="btn">read-more</button>
+                </div>
+                <div class="shortcuts">
+
+                </div>
             </div>
             <!-- content -->
             <div id="content">
@@ -67,23 +202,34 @@
                     <div class="mb-3 row">
                         <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
                         <div class="d-grid gap-2 col-sm-10">
-                            <button class="btn btn-secondary btn-sm text-start" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Bạn đang nghĩ gì?</button>
+                            <button class="btn btn-secondary btn-sm text-start" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Bạn đang nghĩ gì?
+                            </button>
                         </div>
                     </div>
                     <hr>
                     <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-video"></i> Video trực tiếp</button>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-images"></i> Ảnh/Video</button>
-                        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-face-laugh"></i> Cảm xúc/Hoạt động</button>
+                        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-video"></i> Video trực
+                            tiếp
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="fa-solid fa-images"></i> Ảnh/Video
+                        </button>
+                        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-face-laugh"></i> Cảm
+                            xúc/Hoạt
+                            động
+                        </button>
                     </div>
-                </div> 
+                </div>
                 <!-- from viết bài -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
                     <div class="modal-dialog  modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Tạo bài viết</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <div class="row g-3">
@@ -92,261 +238,287 @@
                                     </div>
                                     <div class="col-md-4">
                                         <label class="form-label text-start fw-bold">User Name</label>
-                                        <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                                        <select class="form-select form-select-sm mb-3"
+                                                aria-label=".form-select-sm example">
                                             <option selected>Công khai</option>
                                             <option value="1">Bạn bè</option>
                                             <option value="2">Chỉ mình tôi</option>
                                         </select>
                                     </div>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Bạn đang nghĩ gì?" rows="3"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                              placeholder="Bạn đang nghĩ gì?" rows="3"></textarea>
                                 </div>
                             </div>
-                        <div class="modal-footer">
-                            <div class="d-grid gap-2 col-12 mx-auto">
-                                <button type="button" class="btn btn-primary fw-bold">Đăng</button>
+                            <div class="modal-footer">
+                                <div class="d-grid gap-2 col-12 mx-auto">
+                                    <button type="button" class="btn btn-primary fw-bold">Đăng</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <!-- kết bạn -->
-                <div class="friend-list">
-                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <div class="multy-card">
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
+                        <div class="carousel-item active">
+                            <div class="multy-card">
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="multy-card">
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="multy-card">
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 13rem;">
+                                    <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">Card title</h5>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button">Kết bạn</button>
+                                            <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="multy-card">
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="multy-card">
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
                     </button>
-                  </div>
-                </div>
-                </div>
-                
-                <!-- from bài viết -->
-                <div class="main-content">
-                  <!-- bài viết 1 -->
-                  <div class="card">
-                    <div class="row g-3">
-                      <div class="col-md-2">
-                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
-                      </div>
-                      <div class="col-md-3">
-                          <label class="form-label text-start fw-bold h4">User Name</label>
-                          <span class="badge bg-secondary">
-                            <i class="fa-solid fa-earth-asia"></i>
-                             1 giờ
-                          </span>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
-                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-thumbs-up"></i>
-                           Thích
-                        </button>
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-comment"></i>
-                           Bình luận
-                        </button>
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-share"></i>
-                           Chia sẻ
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- bài viết 2 -->
-                  <div class="card">
-                    <div class="row g-3">
-                      <div class="col-md-2">
-                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
-                      </div>
-                      <div class="col-md-3">
-                          <label class="form-label text-start fw-bold h4">User Name</label>
-                          <span class="badge bg-secondary">
-                            <i class="fa-solid fa-earth-asia"></i>
-                             1 giờ
-                          </span>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
-                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-thumbs-up"></i>
-                           Thích
-                        </button>
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-comment"></i>
-                           Bình luận
-                        </button>
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-share"></i>
-                           Chia sẻ
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- bài viết 3 -->
-                  <div class="card">
-                    <div class="row g-3">
-                      <div class="col-md-2">
-                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
-                      </div>
-                      <div class="col-md-3">
-                          <label class="form-label text-start fw-bold h4">User Name</label>
-                          <span class="badge bg-secondary">
-                            <i class="fa-solid fa-earth-asia"></i>
-                             1 giờ
-                          </span>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
-                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-thumbs-up"></i>
-                           Thích
-                        </button>
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-comment"></i>
-                           Bình luận
-                        </button>
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-share"></i>
-                           Chia sẻ
-                        </button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
             </div>
-            <!-- nav right -->
-            <div id="nav2">
-                nội dung phải
+            <!-- from bài viết -->
+            <div class="main-content">
+                <!-- bài viết 1 -->
+                <div class="card">
+                    <div class="row g-3">
+                        <div class="col-md-2">
+                            <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-start fw-bold h4">User Name</label>
+                            <span class="badge bg-secondary">
+                            <i class="fa-solid fa-earth-asia"></i>
+                             1 giờ
+                          </span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu
+                            mà... haha!!</p>
+                        <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group col-12" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                Thích
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-comment"></i>
+                                Bình luận
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-share"></i>
+                                Chia sẻ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- bài viết 2 -->
+                <div class="card">
+                    <div class="row g-3">
+                        <div class="col-md-2">
+                            <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-start fw-bold h4">User Name</label>
+                            <span class="badge bg-secondary">
+                            <i class="fa-solid fa-earth-asia"></i>
+                             1 giờ
+                          </span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu
+                            mà... haha!!</p>
+                        <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group col-12" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                Thích
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-comment"></i>
+                                Bình luận
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-share"></i>
+                                Chia sẻ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- bài viết 3 -->
+                <div class="card">
+                    <div class="row g-3">
+                        <div class="col-md-2">
+                            <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label text-start fw-bold h4">User Name</label>
+                            <span class="badge bg-secondary">
+                            <i class="fa-solid fa-earth-asia"></i>
+                             1 giờ
+                          </span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu
+                            mà... haha!!</p>
+                        <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group col-12" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                                Thích
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-comment"></i>
+                                Bình luận
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <i class="fa-solid fa-share"></i>
+                                Chia sẻ
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <!-- nav right -->
+        <div id="nav2">
+            nội dung phải
         </div>
     </div>
 
+</div>
+<script>
+    function readmore() {
+        // let dots = document.getElementById('dots');
+        let moretext = document.getElementById('more');
+        let btn = document.getElementById('btn');
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        if (dots.style.display === "none"){
+            dots.style.display = "inline";
+            btn.innerHTML = "read more";
+            moretext.style.display = 'none';
+        }else{
+            dots.style.display = 'none';
+            btn.innerHTML = "read less";
+            moretext.style.display = 'inline';
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 </body>
 </html>
