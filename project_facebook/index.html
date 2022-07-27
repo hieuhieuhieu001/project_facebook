@@ -11,9 +11,48 @@
 </head>
 <body>
     <!-- home page -->
-    <div class="container">
+    <div class="swap">
         <!-- header -->
-        <div id="header">
+        <div class="header">
+          <div class="search-bar">
+            <div class="logo">
+              <img src="\img\facebook_logo_icon.png" alt="">
+            </div>
+            <div class="search">
+              <input type="text" placeholder=" Tìm kiếm trên facebook">
+            </div>
+          </div>
+          <div class="home">
+            <div class="bg-home">
+              <button><i class="fa-solid fa-house"></i></button>
+            </div>
+            <div class="bg-home">
+              <button><i class="fa-solid fa-tv"></i></button>
+            </div>
+            <div class="bg-home">
+              <button><i class="fa-solid fa-store"></i></button>
+            </div>
+            <div class="bg-home">
+              <button><i class="fa-solid fa-users"></i></button>
+            </div>
+            <div class="bg-home">
+              <button><i class="fa-solid fa-gamepad"></i></button>
+            </div>
+          </div>
+          <div class="user">
+            <div class="bg-user">
+              <button><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="bg-user">
+              <button><i class="fa-brands fa-facebook-messenger"></i></button>
+            </div>
+            <div class="bg-user">
+              <button><i class="fa-solid fa-bell"></i></button>
+            </div>
+            <div class="bg-user">
+              <button id="bt-user" onclick="myFuction()"><img src="\img\userCarrd.jpg" alt=""></button>
+            </div>
+          </div>
         </div>
         <!-- conten & nav -->
         <div id="main">
@@ -71,11 +110,12 @@
                     </div>
                 </div>
                 <!-- kết bạn -->
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="friend-list">
+                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <div class="multy-card">
-                            <div class="card" style="width: 13rem;">
+                            <div class="card">
                                 <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
@@ -85,7 +125,7 @@
                                   </div>
                                 </div>
                             </div>
-                            <div class="card" style="width: 13rem;">
+                            <div class="card">
                                 <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
@@ -95,41 +135,7 @@
                                   </div>
                                 </div>
                             </div>
-                            <div class="card" style="width: 13rem;">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="multy-card">
-                            <div class="card" style="width: 13rem;">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 13rem;">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card" style="width: 13rem;">
+                            <div class="card">
                                 <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
@@ -143,7 +149,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="multy-card">
-                            <div class="card" style="width: 13rem;">
+                            <div class="card">
                                 <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
@@ -153,7 +159,7 @@
                                   </div>
                                 </div>
                             </div>
-                            <div class="card" style="width: 13rem;">
+                            <div class="card">
                                 <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
@@ -163,7 +169,41 @@
                                   </div>
                                 </div>
                             </div>
-                            <div class="card" style="width: 13rem;">
+                            <div class="card">
+                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Kết bạn</button>
+                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="multy-card">
+                            <div class="card">
+                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Kết bạn</button>
+                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Kết bạn</button>
+                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="card">
                                 <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
@@ -186,9 +226,116 @@
                     </button>
                   </div>
                 </div>
-                <!-- test -->
+                </div>
                 
                 <!-- from bài viết -->
+                <div class="main-content">
+                  <!-- bài viết 1 -->
+                  <div class="card">
+                    <div class="row g-3">
+                      <div class="col-md-2">
+                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                      </div>
+                      <div class="col-md-3">
+                          <label class="form-label text-start fw-bold h4">User Name</label>
+                          <span class="badge bg-secondary">
+                            <i class="fa-solid fa-earth-asia"></i>
+                             1 giờ
+                          </span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
+                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group col-12" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-thumbs-up"></i>
+                           Thích
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-comment"></i>
+                           Bình luận
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-share"></i>
+                           Chia sẻ
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- bài viết 2 -->
+                  <div class="card">
+                    <div class="row g-3">
+                      <div class="col-md-2">
+                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                      </div>
+                      <div class="col-md-3">
+                          <label class="form-label text-start fw-bold h4">User Name</label>
+                          <span class="badge bg-secondary">
+                            <i class="fa-solid fa-earth-asia"></i>
+                             1 giờ
+                          </span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
+                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group col-12" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-thumbs-up"></i>
+                           Thích
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-comment"></i>
+                           Bình luận
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-share"></i>
+                           Chia sẻ
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- bài viết 3 -->
+                  <div class="card">
+                    <div class="row g-3">
+                      <div class="col-md-2">
+                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                      </div>
+                      <div class="col-md-3">
+                          <label class="form-label text-start fw-bold h4">User Name</label>
+                          <span class="badge bg-secondary">
+                            <i class="fa-solid fa-earth-asia"></i>
+                             1 giờ
+                          </span>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
+                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-footer">
+                      <div class="btn-group col-12" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-thumbs-up"></i>
+                           Thích
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-comment"></i>
+                           Bình luận
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                          <i class="fa-solid fa-share"></i>
+                           Chia sẻ
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
             <!-- nav right -->
             <div id="nav2">

@@ -3,30 +3,135 @@
     margin: 0;
     padding: 0;
 }
-
-#header{
+.swap{
+    position: relative;
+}
+/* đầu trang */
+.header{
     width: 100%;
-    height: 50px;
-    float: left;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
     background-color: #252628;
 }
-
+/* search */
+.search-bar{
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.search-bar > .logo > img{
+   width: 70%;
+   height: auto;
+   position: absolute;
+   top: 5px;
+   left: 10px;
+}
+.search-bar > .logo{
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.search-bar > .search > input{
+    width: 65%;
+    border-radius: 30px;
+    position: absolute;
+    top: 10px;
+    left: 20%;
+    bottom: 10px;
+}
+/* nút điều khiển trang chủ */
+.home{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    bottom: 0;
+    display: flex;
+}
+.home > .bg-home{
+    width: 20%;
+}
+.home > .bg-home > button{
+    width: 95%;
+    height: 80%;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    background-color: #252628;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.home > .bg-home > button:hover{
+    background-color: #3a3b3c;
+}
+/* user */
+.user{
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 75%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: right;
+}
+.user > .bg-user{
+    width: 15%;
+}
+.user > .bg-user > button{
+    width: 95%;
+    height: 80%;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    background-color: #3a3b3c;
+    margin-top: 5px;
+}
+.user > .bg-user > button > img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.user > .bg-user > button:hover{
+    background-color: #474747;
+}
+/* border */
 #main{
     width: 100%;
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
-
+/* NAV trái */
 #nav1{
     width: 25%;
-    height: 800px;
     background-color: aqua;
-    float: left;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
 }
+/* content */
 #content{
     width: 50%;
-    height: 800px;
-    background-color: aquamarine;
-    float: left;
+    position: absolute;
+    top: 60px;
+    left: 25%;
+    bottom: 0;
 }
 /* css from đăng bài */
 .from-dangbai{
@@ -60,19 +165,50 @@
     color: white;
     background-color: #252628;
 }
+/* friend list */
+.friend-list{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 #carouselExampleControls{
     width: 90%;
-    margin: auto;
+    position: absolute;
+    left: 5%;
+    right: 5%;
 }
 .multy-card{
     display: flex;
 }
 .multy-card > .card{
+    width: 33%;
     margin-right: 5px;
 }
+/* from bài viết */
+.main-content{
+    position: absolute;
+    top: 640px;
+    left: 0;
+    right: 0;
+}
+.main-content > .card{
+    background-color: #3a3b3c;
+    color: white;
+    width: 44%;
+    margin: auto; 
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.main-content > .card > .row{
+    margin-left: 10px;
+}
+
+/* Navbar phải */
 #nav2{
     width: 25%;
-    height: 800px;
     background-color: aqua;
-    float: left;
+    position: fixed;
+    left: 75%;
+    top: 60px;
+    bottom: 0;
 }
