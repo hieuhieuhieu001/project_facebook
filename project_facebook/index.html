@@ -10,6 +10,9 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- comment facebook -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v14.0" nonce="kSy3sk35"></script>
     <!-- home page -->
     <div class="swap">
         <!-- header -->
@@ -20,25 +23,25 @@
               <img src="\img\facebook_logo_icon.png" alt="">
             </div>
             <div class="search">
-              <input type="text" placeholder=" Tìm kiếm trên facebook">
+              <input type="text" placeholder="  Search facebook">
             </div>
           </div>
           <!-- home bar -->
           <div class="home">
             <div class="bg-home">
-              <button><i class="fa-solid fa-house"></i></button>
+              <button><a href="/index.html"><i class="fa-solid fa-house"></i></a></button>
             </div>
             <div class="bg-home">
-              <button><i class="fa-solid fa-tv"></i></button>
+              <button><a href="#"><i class="fa-solid fa-tv"></i></a></button>
             </div>
             <div class="bg-home">
-              <button><i class="fa-solid fa-store"></i></button>
+              <button><a href="#"><i class="fa-solid fa-store"></i></a></button>
             </div>
             <div class="bg-home">
-              <button><i class="fa-solid fa-users"></i></button>
+              <button><a href="#"><i class="fa-solid fa-users"></i></a></button>
             </div>
             <div class="bg-home">
-              <button><i class="fa-solid fa-gamepad"></i></button>
+              <button><a href="#"><i class="fa-solid fa-gamepad"></i></a></button>
             </div>
           </div>
           <!-- user bar -->
@@ -50,7 +53,7 @@
               <button onclick="myFuction()"><i class="fa-brands fa-facebook-messenger"></i></button>
             </div>
             <div class="bg-user">
-              <button><i class="fa-solid fa-bell"></i></button>
+              <button><i class="fa-solid fa-bell" onclick="notification_bt_oppen()"></i></button>
             </div>
             <div class="bg-user">
               <button id="bt-user" onclick="userBox()"><img src="\img\userCarrd.jpg" alt=""></button>
@@ -67,7 +70,7 @@
                   <i class="fa-solid fa-ellipsis"></i>
                 </button>
                 <button>
-                  <i class="fa-solid fa-maximize"></i>
+                  <a href="/messenger.html"><i class="fa-solid fa-maximize"></i></a>
                 </button>
                 <button>
                   <i class="fa-solid fa-video"></i>
@@ -176,60 +179,329 @@
           <!-- user box -->
           <div class="main-user-box" id="fun-user-box">
             <div class="bt-exit">
-              <button onclick="userbox_bt_exit()">
-                <i class="fa-solid fa-circle-xmark"></i>
-              </button>
+                <button onclick="userbox_bt_exit()">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </button>
             </div>
             <div class="header-user-box">
-              <div class="avt-user-box">
-                <img src="img\userCarrd.jpg" alt="">
-                <p>User Name</p>
-              </div>
-              <hr>
-              <div class="profile-user-box-link">
-                <a href="#">Xem trang cá nhân</a>
-              </div>
+                <div class="avt-user-box">
+                    <img src="img\userCarrd.jpg" alt="">
+                    <p>User Name</p>
+                </div>
+                <hr>
+                <div class="profile-user-box-link">
+                    <a href="/profile.html">see all profile</a>
+                </div>
             </div>
             <div class="foodter-user-box">
-              <div class="foodter-user-item">
-                <a href="#">
-                  <i class="fa-solid fa-gear"></i>
-                  <p> Cài đặt & quyền riêng tư</p>
-                </a>
-              </div>
-              <div class="foodter-user-item">
-                <a href="#">
-                  <i class="fa-solid fa-circle-question"></i>
-                  <p> Trợ giúp và hỗ trợ</p>
-                </a>
-              </div>
-              <div class="foodter-user-item">
-                <a href="#">
-                  <i class="fa-solid fa-moon"></i>
-                  <p> Màn hình & trợ năng</p>
-                </a>
-              </div>
-              <div class="foodter-user-item">
-                <a href="#">
-                  <i class="fa-solid fa-clipboard-question"></i>
-                  <p> Đóng góp ý kiến</p>
-                </a>
-              </div>
-              <div class="foodter-user-item">
-                <a href="/LoginFacebook.html">
-                  <i class="fa-solid fa-right-from-bracket"></i>
-                  <p> Đăng xuất</p>
-                </a>
-              </div>
+                <div class="foodter-user-item">
+                    <a href="#">
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Settings & privacy</p>
+                    </a>
+                </div>
+                <div class="foodter-user-item">
+                    <a href="#">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <p>Help & support</p>
+                    </a>
+                </div>
+                <div class="foodter-user-item">
+                    <a href="#">
+                        <i class="fa-solid fa-moon"></i>
+                        <p>Display & accessibility</p>
+                    </a>
+                </div>
+                <div class="foodter-user-item">
+                    <a href="#">
+                        <i class="fa-solid fa-clipboard-question"></i>
+                        <p>give feedback</p>
+                    </a>
+                </div>
+                <div class="foodter-user-item">
+                    <a href="/LoginFacebook.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <p>Log out</p>
+                    </a>
+                </div>
             </div>
-          </div>
+        </div>
+          <!-- notification box -->
+          <div class="notification-main" id="notification">
+            <div class="notification-header">
+                <div class="notification-txtHeader">
+                    <p>Notifications</p>
+                </div>
+                <div class="notification-btIcon">
+                    <button>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <button onclick="notification_bt_exit()">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="notification-foodter">
+                <div class="notification">
+                    <div class="notification-box">
+                        <div class="notification-box-icon">
+                            <img src="\img\userCarrd.jpg" alt="">
+                        </div>
+                        <div class="notification-box-name">
+                            <p>Notifications 1</p>
+                            <p>1 hours ago</p>
+                        </div>
+                        <div class="notification-box-menu">
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification2">
+                    <div class="notification-box">
+                        <div class="notification-box-icon">
+                            <img src="\img\userCarrd.jpg" alt="">
+                        </div>
+                        <div class="notification-box-name">
+                            <p>Notifications 2</p>
+                            <p>2 hours ago</p>
+                        </div>
+                        <div class="notification-box-menu">
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification3">
+                    <div class="notification-box">
+                        <div class="notification-box-icon">
+                            <img src="\img\userCarrd.jpg" alt="">
+                        </div>
+                        <div class="notification-box-name">
+                            <p>Notifications 3</p>
+                            <p>A day ago</p>
+                        </div>
+                        <div class="notification-box-menu">
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification4">
+                    <div class="notification-box">
+                        <div class="notification-box-icon">
+                            <img src="\img\userCarrd.jpg" alt="">
+                        </div>
+                        <div class="notification-box-name">
+                            <p>Notifications 4</p>
+                            <p>2 day ago</p>
+                        </div>
+                        <div class="notification-box-menu">
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification5">
+                    <div class="notification-box">
+                        <div class="notification-box-icon">
+                            <img src="\img\userCarrd.jpg" alt="">
+                        </div>
+                        <div class="notification-box-name">
+                            <p>Notifications</p>
+                            <p>a week ago</p>
+                        </div>
+                        <div class="notification-box-menu">
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="notification6">
+                    <div class="notification-box">
+                        <div class="notification-box-icon">
+                            <img src="\img\userCarrd.jpg" alt="">
+                        </div>
+                        <div class="notification-box-name">
+                            <p>Notifications 6</p>
+                            <p>a week ago</p>
+                        </div>
+                        <div class="notification-box-menu">
+                            <button>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         <!-- conten & nav -->
         <div id="main">
             <!-- nav left -->
             <div id="nav1">
-                nội dung bên trái
-            </div>
+              <div class="avatar-profile">
+                <div>
+                  <img class="avatar"
+                      src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-1/275821209_1537433039972844_6085414064181875256_n.jpg?stp=dst-jpg_p100x100&_nc_cat=104&ccb=1-7&_nc_sid=7206a8&_nc_ohc=uQ9YGDGRolwAX960-7o&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fhan2-4.fna&oh=00_AT-ffca_MuxM-e0mqxCXE7ALuOa33zvIsrKhzRNTS-rJxQ&oe=62E3E07B"
+                      alt="">
+                  </div>
+                <div class="text-icon"><label><a href="/profile.html">profile</a></label></div>
+              </div>
+              <div class="icon">
+                  <ul>
+                      <li class="friends">
+                          <div>
+                            <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                    alt="">
+                          </div>
+                          <div class="text-icon"><label>friend</label></div>
+                      </li>
+                      <li class="messenger-navbar">
+                          <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/YF1bztyGuX-.png"
+                                    alt=""></div>
+                          <div class="text-icon"><label><a href="/messenger.html">Messenger</a></label></div>
+                      </li>
+                      <li class="saved">
+                          <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/2uPlV4oORjU.png"
+                                    alt=""></div>
+                          <div class="text-icon"><label>saved</label></div>
+                      </li>
+                      <li class="group">
+                          <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png"
+                                    alt=""></div>
+                          <div class="text-icon"><label>groups</label></div>
+                      </li>
+                      <li class="Marketplace">
+                          <div><img class="icon-marketplace"
+                                    src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/9BDqQflVfXI.png" alt=""></div>
+                          <div class="text-icon"><label>Marketplace</label></div>
+                      </li>
+                    </ul>
+                        <ul id="more">
+                          <li class="fundraising-campaign" id="fundraising-campaign">
+                              <div><img class="icon-fundraising-campaign"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/A2tHTy6ibgT.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>fundraising campaign</label></div>
+                          </li>
+                          <li class="play-game" id="play-game">
+                              <div><img class="icon-play-game"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/XEWvxf1LQAG.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>play-game</label></div>
+                          </li>
+                          <li class="facebook-pay" id=facebook-pay">
+                              <div><img class="icon-facebook-pay"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/xH4w-lk44we.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>facebook-face</label></div>
+                          </li>
+                          <li class="most-recent" id="most-recent">
+                              <div><img class="icon-most-recent"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/3dN1QwOLden.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>most recent</label></div>
+                          </li>
+                          <li class="blood-donation" id="blood-donation">
+                              <div><img class="icon-blood-donation"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/9LIH24rbn9J.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>blood-donation</label></div>
+                          </li>
+                          <li class="events" id="events">
+                              <div><img class="icon-events"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/XXwl2m1vjqM.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>events</label></div>
+                          </li>
+                          <li class="emotional-health" id="emotional-health">
+                              <div><img class="icon-emotional-health"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/GyZZ7Jrr5OV.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>emotional-health</label></div>
+                          </li>
+                          <li class="pages" id="pages">
+                              <div><img class="icon-pages"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>pages</label></div>
+                          </li>
+                          <li class="ad-manager" id=" ad-manager" x>
+                              <div><img class="icon-ad-manager"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/qR88GIDM38e.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>ad-manager</label></div>
+                          <li class="climate-science-center" id="climate-science-center">
+                              <div><img class="icon-climate-science-center"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/tKwWVioirmj.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>climate-science-center</label></div>
+                          </li>
+                          <li class="ad-center" id="ad-center">
+                              <div><img class="icon-ad-center"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/_JPdPzLmp9j.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>ad-center</label></div>
+                          </li>
+                          <li class="emergency-response" id="emergency-response">
+                              <div><img class="icon-emergency-response"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/y7p-dcTnGV_.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>emergency-response</label></div>
+                          </li>
+                          <li class="video-play-game" id="video-play-game">
+                              <div><img class="icon-video-play-game"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/eVgQ0NIygAW.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>video-play-game</label></div>
+                          </li>
+                          <li class="video-live" id="video-live">
+                              <div><img class="icon-video-live"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/GmeV2VDbZTi.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>video-live</label></div>
+                          </li>
+                          <li class="watch" id="watch">
+                              <div><img class="icon-watch"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>watch</label></div>
+                          </li>
+                          <li class="favorites" id="favorites">
+                              <div><img class="icon-favorites"
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/Zy9sJGThmCS.png" alt="">
+                              </div>
+                              <div class="text-icon"><label>favorites</label></div>
+                          </li>
+                        </ul>
+                  <button onclick="readmore()" class="btn-read-more" id="read-more"><i class="fa-solid fa-angle-down"></i> See more</button>
+                  <button onclick="hidemore()" class="btn-hide-more" id="hide-more"><i class="fa-solid fa-chevron-up"></i> See less </button>
+                  <div  class="title-shortcuts"><p>Your shortcuts</p></div>
+                    <ul>
+                        <li class="shortcut">
+                            <img class="image-shortcut" src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/291585383_2302187373269554_1156178413762692187_n.jpg?stp=dst-jpg_s960x960&_nc_cat=1&ccb=1-7&_nc_sid=8631f5&_nc_ohc=7CC6456xR98AX9mdwi3&_nc_ht=scontent.fhan2-4.fna&oh=00_AT8VuI8gG0izsymCxiRHeZu-sf0a6IxW844eklwv3U_dFw&oe=62E9C65E" alt="">
+                            <label class="text-shortcut">Đáy xã hội</label>
+                            <a  class="text-shortcut" href="https://www.facebook.com/groups/569483358139838"><div>        </div></a>
+                        </li>
+                        <li class="shortcut">
+                            <img class="image-shortcut" src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/285123477_10216829712055729_186812270908435444_n.png?stp=dst-jpg_s960x960&_nc_cat=1&ccb=1-7&_nc_sid=8631f5&_nc_ohc=vTpdxZUEiD0AX-WcpUd&_nc_ht=scontent.fhan2-4.fna&oh=00_AT_TYFQOhqofXx-YRXW2h6XURAuDF9xlzskyLuIQcdBsZw&oe=62E976D2" alt="">
+                            <label class="text-shortcut">VOZ.VN</label>
+                            <a class="text-shortcut" href="https://www.facebook.com/groups/voz.ver3"> <div>                   </div></a>
+                        </li>
+                        <li class="shortcut">
+                            <img class="image-shortcut" src="https://scontent.fhan2-1.fna.fbcdn.net/v/t39.30808-6/288814081_2958952277738504_2721286312402816092_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8631f5&_nc_ohc=FSXzUOLWrREAX-X3cNx&_nc_ht=scontent.fhan2-1.fna&oh=00_AT-o4ebz3RJmmdk4DZSBCNCfueyk0apFW5SlrYdb-FSCpQ&oe=62E93A37" alt="">
+                            <label class="text-shortcut">[voz]-f17 With Love !</label>
+                            <a class="text-shortcut" href="https://www.facebook.com/groups/vozer.luv"><div>                      </div></a>
+                        </li>
+                    </ul>
+                  </div>
+              </div>
             <!-- content -->
             <div id="content">
                 <!-- from đăng bài viết -->
@@ -237,14 +509,22 @@
                     <div class="mb-3 row">
                         <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
                         <div class="d-grid gap-2 col-sm-10">
-                            <button class="btn btn-secondary btn-sm text-start" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Bạn đang nghĩ gì?</button>
+                            <button class="btn btn-light btn-sm text-start" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              What`s on your mind ?
+                            </button>
                         </div>
                     </div>
                     <hr>
                     <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-video"></i> Video trực tiếp</button>
-                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-images"></i> Ảnh/Video</button>
-                        <button type="button" class="btn btn-secondary"><i class="fa-solid fa-face-laugh"></i> Cảm xúc/Hoạt động</button>
+                        <button type="button" class="btn">
+                          <i class="fa-solid fa-video"></i> live video
+                        </button>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <i class="fa-solid fa-images"></i> Photo/video
+                        </button>
+                        <button type="button" class="btn">
+                          <i class="fa-solid fa-face-laugh"></i> Felling/Activity
+                        </button>
                     </div>
                 </div> 
                 <!-- from viết bài -->
@@ -252,7 +532,7 @@
                     <div class="modal-dialog  modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Tạo bài viết</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Create post</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -263,17 +543,18 @@
                                     <div class="col-md-4">
                                         <label class="form-label text-start fw-bold">User Name</label>
                                         <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
-                                            <option selected>Công khai</option>
-                                            <option value="1">Bạn bè</option>
-                                            <option value="2">Chỉ mình tôi</option>
+                                            <option selected>Public</option>
+                                            <option value="1">Friends</option>
+                                            <option value="2">Only me</option>
                                         </select>
                                     </div>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Bạn đang nghĩ gì?" rows="3"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" 
+                                      placeholder="What`s on your mind ?" rows="3"></textarea>
                                 </div>
                             </div>
                         <div class="modal-footer">
                             <div class="d-grid gap-2 col-12 mx-auto">
-                                <button type="button" class="btn btn-primary fw-bold">Đăng</button>
+                                <button type="button" class="btn btn-primary fw-bold">Post</button>
                             </div>
                         </div>
                     </div>
@@ -290,8 +571,8 @@
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
                                   </div>
                                 </div>
                             </div>
@@ -300,8 +581,8 @@
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
                                   </div>
                                 </div>
                             </div>
@@ -310,42 +591,8 @@
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="multy-card">
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
                                   </div>
                                 </div>
                             </div>
@@ -358,8 +605,8 @@
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
                                   </div>
                                 </div>
                             </div>
@@ -368,8 +615,8 @@
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
                                   </div>
                                 </div>
                             </div>
@@ -378,8 +625,42 @@
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Kết bạn</button>
-                                    <button class="btn btn-secondary" type="button">Xóa, gỡ bỏ</button>
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="multy-card">
+                            <div class="card">
+                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
                                   </div>
                                 </div>
                             </div>
@@ -397,7 +678,6 @@
                   </div>
                 </div>
                 </div>
-                
                 <!-- from bài viết -->
                 <div class="main-content">
                   <!-- bài viết 1 -->
@@ -410,7 +690,7 @@
                           <label class="form-label text-start fw-bold h4">User Name</label>
                           <span class="badge bg-secondary">
                             <i class="fa-solid fa-earth-asia"></i>
-                             1 giờ
+                             1h
                           </span>
                       </div>
                     </div>
@@ -420,20 +700,21 @@
                     </div>
                     <div class="card-footer">
                       <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">
+                        <button onclick="document.getElementById('like-1').style.color = 'blue'" type="button" class="btn btn-light" id="like-1">
                           <i class="fa-solid fa-thumbs-up"></i>
-                           Thích
-                        </button>
-                        <button type="button" class="btn btn-secondary">
+                          like
+                      </button>
+                      <button type="button" class="btn btn-light">
                           <i class="fa-solid fa-comment"></i>
-                           Bình luận
-                        </button>
-                        <button type="button" class="btn btn-secondary">
+                          comment
+                      </button>
+                      <button type="button" class="btn btn-light">
                           <i class="fa-solid fa-share"></i>
-                           Chia sẻ
-                        </button>
+                          share
+                      </button>
                       </div>
                     </div>
+                    <div class="fb-comments" data-href="http://127.0.0.1:5500/index.html" data-width="100%" data-numposts="1"></div>
                   </div>
                   <!-- bài viết 2 -->
                   <div class="card">
@@ -445,7 +726,7 @@
                           <label class="form-label text-start fw-bold h4">User Name</label>
                           <span class="badge bg-secondary">
                             <i class="fa-solid fa-earth-asia"></i>
-                             1 giờ
+                             1h
                           </span>
                       </div>
                     </div>
@@ -455,20 +736,21 @@
                     </div>
                     <div class="card-footer">
                       <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">
+                        <button onclick="document.getElementById('like-2').style.color = 'blue'" type="button" class="btn btn-light" id="like-2">
                           <i class="fa-solid fa-thumbs-up"></i>
-                           Thích
-                        </button>
-                        <button type="button" class="btn btn-secondary">
+                          like
+                      </button>
+                      <button type="button" class="btn btn-light">
                           <i class="fa-solid fa-comment"></i>
-                           Bình luận
-                        </button>
-                        <button type="button" class="btn btn-secondary">
+                          comment
+                      </button>
+                      <button type="button" class="btn btn-light">
                           <i class="fa-solid fa-share"></i>
-                           Chia sẻ
-                        </button>
+                          share
+                      </button>
                       </div>
                     </div>
+                    <div class="fb-comments" data-href="http://127.0.0.1:5500/index.html" data-width="100%" data-numposts="1"></div>
                   </div>
                   <!-- bài viết 3 -->
                   <div class="card">
@@ -480,7 +762,7 @@
                           <label class="form-label text-start fw-bold h4">User Name</label>
                           <span class="badge bg-secondary">
                             <i class="fa-solid fa-earth-asia"></i>
-                             1 giờ
+                             1h
                           </span>
                       </div>
                     </div>
@@ -490,26 +772,85 @@
                     </div>
                     <div class="card-footer">
                       <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">
+                        <button onclick="document.getElementById('like-3').style.color = 'blue'" type="button" class="btn btn-light" id="like-3">
                           <i class="fa-solid fa-thumbs-up"></i>
-                           Thích
+                          like
                         </button>
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-comment"></i>
-                           Bình luận
+                        <button type="button" class="btn btn-light">
+                            <i class="fa-solid fa-comment"></i>
+                            comment
                         </button>
-                        <button type="button" class="btn btn-secondary">
-                          <i class="fa-solid fa-share"></i>
-                           Chia sẻ
+                        <button type="button" class="btn btn-light">
+                            <i class="fa-solid fa-share"></i>
+                            share
                         </button>
                       </div>
                     </div>
+                    <div class="fb-comments" data-href="http://127.0.0.1:5500/index.html" data-width="100%" data-numposts="1"></div>
                   </div>
                 </div>
             </div>
             <!-- nav right -->
             <div id="nav2">
-                
+              <div class="banner">
+                <button class="banner1">
+                    <img src="https://thuthuatnhanh.com/wp-content/uploads/2019/12/anh-anime-dep-de-thuong.jpg" alt="">
+                    <p>MSI gaming</p>
+                </button>
+                <button class="banner2">
+                    <img src="https://thuthuatnhanh.com/wp-content/uploads/2019/12/anh-anime-dep-de-thuong.jpg" alt="">
+                    <p>MSI gaming</p>
+                </button>
+              </div>
+              <div class="friend-card">
+                  <img src="https://inkythuatso.com/uploads/thumbnails/800/2022/03/anh-dai-dien-anime-nam-24-30-15-34-56.jpg"  alt="..." >
+                  <div class="friend-card-header">
+                    <p>user name</p>
+                    <p>3 bạn chung</p> 
+                  </div>
+                  <div class="friend-card-body">
+                    <a href="#" class="btn btn-primary">Chấp nhận </a>
+                    <a href="#" class="btn btn-primary">Hủy</a>
+                  </div>
+                </div>
+                <div class="friend-list2">
+                  <button class="kttt">
+                    <div class="krr">
+                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <p>user name</p>
+                    </div>
+                  </button> <button class="kttt">
+                    <div class="krr">
+                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <p>user name</p>
+                    </div>
+                  </button>
+                  <button class="kttt">
+                    <div class="krr">
+                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <p>user name</p>
+                    </div>
+                  </button>
+                  <button class="kttt">
+                    <div class="krr">
+                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <p>user name</p>
+                    </div>
+                  </button>
+                  <button class="kttt">
+                    <div class="krr">
+                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <p>user name</p>
+                    </div>
+                  </button>
+                  <button class="kttt">
+                    <div class="krr">
+                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <p>user name</p>
+                    </div>
+                  </button>
+                  
+              </div>
             </div>
         </div>
     </div>

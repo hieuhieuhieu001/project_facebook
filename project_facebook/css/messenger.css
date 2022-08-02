@@ -117,7 +117,7 @@ body{
     background-color: #cbcbcb;
 }
 /* messenger navbar */
-.messenger-main{
+#messenger{
     width: 25%;
     height: 500px;
     border-radius: 10px;
@@ -125,6 +125,7 @@ body{
     position: absolute;
     top: 60px;
     left: 75%;
+    right: 0;
     display: none;
     box-shadow: 0px 0px 20px #adadad;
 }
@@ -134,7 +135,6 @@ body{
     left: 0;
     right: 0;
     bottom: 80%;
-    
 }
 .messenger-txtHeader{
     width: 50%;
@@ -155,13 +155,9 @@ body{
     width: 20%;
     height: 35px;
     font-size: 20px;
-    color: #606770;
     background-color: white;
     border: none;
     border-radius: 50%;
-}
-.messenger-btIcon > button > a{
-    color: #606770;
 }
 .messenger-btIcon > button:hover{
     background-color: #f0f2f5;
@@ -675,6 +671,51 @@ body{
     bottom: 0;
     overflow-y: scroll;
 }
+.messenger-header1{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 75%;
+    bottom: 77%;
+    background-color: white;
+    border-bottom: 1px solid #676d76;
+}
+.messenger-btIcon1{
+    width: 50%;
+    position: absolute;
+    top: 5%;
+    left: 60%;
+}
+.messenger-btIcon1 > button{
+    width: 20%;
+    height: 35px;
+    font-size: 20px;
+    color: #606770;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
+.messenger-btIcon1 > button:hover{
+    background-color: #f0f2f5;
+}
+.messenger-search1{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+.messenger-search1 > input{
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    right: 5%;
+    bottom: 0%;
+    background-color: #f0f2f5;
+}
 ::-webkit-scrollbar{
     width: 10px;
     background: lightgray;
@@ -683,17 +724,6 @@ body{
 ::-webkit-scrollbar-thumb{
     background-color: grey;
     border-radius: 5px;
-}
-.avatar-profile{
-    width: 300px;
-    height: 50px;
-    display: flex;
-    margin-top: 10px;
-    margin-left: 35px;
-    border-radius: 10px;
-}
-.avatar-profile:hover{
-    background-color: #d1d1d1;
 }
 .text-icon > label  a{
     text-decoration: none;
@@ -709,518 +739,140 @@ body{
     height: 36px;
     width: 36px;
 }
+.icon > ul{
+    list-style-type: none;
+    margin-top: 120px;
+}
 .icon > ul > li{
     width: 300px;
-    height: 50px;
+    height: 60px;
     border-radius: 10px;
 }
 .icon > ul > li:hover{
     background-color: #d1d1d1;
 }
-.text-icon{
+.text-icon > a{
+    color: black;
+    text-decoration: none;
     padding-left: 35px;
     font-weight: bold;
     text-align: left;
 }
-.friends{
+.messengerbox{
     display: flex;
     /*width: 36px;*/
     /*height: 36px;*/
     padding-top: 10px;
 }
-.messenger-navbar{
-    display: flex;
-    /* width: 36px;
-    height: 36px; */
-    padding-top: 10px;
-}
-.saved{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.group{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.Marketplace{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.fundraising-campaign{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.play-game{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.facebook-pay{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.most-recent{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.blood-donation{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.events{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.emotional-health{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.pages{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.ad-manager{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.climate-science-center{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.ad-center{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.emergency-response{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.video-play-game{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.video-live{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.watch{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.favorites{
-    display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
-}
-.icon-marketplace{
-    width: 36px;
-    height: 36px;
-}
-.icon-fundraising-campaign{
-    width: 36px;
-    height: 36px;
-}
-.icon-play-game{
-    width: 36px;
-    height: 36px;
-}
-.icon-facebook-pay{
-    width: 36px;
-    height: 36px;
-}
-.icon-most-recent{
-    width: 36px;
-    height: 36px;
-}
-.icon-blood-donation{
-    width: 36px;
-    height: 36px;
-}
-.icon-blood-donation{
-    width: 36px;
-    height: 36px;
-}
-.icon-events{
-    width: 36px;
-    height: 36px;
-}
-.icon-emotional-health{
-    width: 36px;
-    height: 36px;
-}
-.icon-pages{
-    width: 36px;
-    height: 36px;
-}
-.icon-ad-manager{
-    width: 36px;
-    height: 36px;
-}
-.icon-climate-science-center{
-    width: 36px;
-    height: 36px;
-}
-.icon-ad-center{
-    width: 36px;
-    height: 36px;
-}
-.icon-emergency-response{
-    width: 36px;
-    height: 36px;
-}
-.icon-video-play-game{
-    width: 36px;
-    height: 36px;
-}
-.icon-video-live{
-    width: 36px;
-    height: 36px;
-}
-.icon-watch{
-    width: 36px;
-    height: 36px;
-}
-.icon-favorites{
-    width: 36px;
-    height: 36px;
-}
-#more{
-    display: none;
-}
-.btn-read-more{
-    width: 300px;
-    height: 50px;
-    border: none;
-    border-radius: 10px;
-    margin-left: 30px;
-    font-weight: bold;
-}
-.btn-read-more:hover{
-    background-color: #d1d1d1
-}
-.btn-hide-more{
-    width: 300px;
-    height: 50px;
-    border: none;
-    border-radius: 10px;
-    margin-left: 30px;
-    font-weight: bold;
-    display: none;
-}
-.btn-hide-more:hover{
-    background-color: #d1d1d1
-}
-/*
-shortcuts
- */
- .title-shortcuts{
-    width: 300px;
-    height: 50px;  
-}
-.title-shortcuts > p{
-    margin-left: 10%;
-    padding-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-}
-.shortcut{
-    margin-top: 10px;
-    list-style-type: none;
-}
-.image-shortcut{
-    width: 16%;
-    height: 100%;
-    border-radius: 10px;
-}
-.text-shortcut{
-    font-weight: bold;
-    padding-left: 20px;
+/* messenger main */
+.messenger-main{
+    width: 75%;
+    background-color: white;
+    position: absolute;
+    left: 25%;
+    right: 0;
 }
 /* content */
-#content{
-    width: 50%;
+/* .content{
+    width: 75%;
     position: absolute;
+    top: 0;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+} */
+.messengerbox-header{
+    width: 75%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    position: fixed;
     top: 60px;
     left: 25%;
-    bottom: 0;
+    right: 0;
 }
-/* css from đăng bài */
-.from-dangbai{
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0px 0px 20px #adadad;
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 10px;
-    float: left;
+.messengerbox-header-icon > img{
+    position: absolute;
+    top: 5%;
+    left: 1%;
 }
-.from-dangbai > .btn-group > button:hover{
-    background-color: #d1d1d1;
+.messengerbox-header-text-icon > label{
+    position: absolute;
+    top: 30%;
+    left: 9%;
+    font-weight: bold;
 }
-.from-dangbai > .mb-3 > .d-grid > button:hover{
-    background-color: #d1d1d1;
+.messenger-btIcon2{
+    width: 30%;
+    text-align: right;
+    position: absolute;
+    top: 20%;
+    left: 67%;
+    right: 3%;
 }
-/* .from-dangbai > hr{
-    color: white;
-} */
-.mb-3 > img{
-    width: 15%;
-    height: auto;
-    border-radius: 50px;
-}
-.col-sm-10 > button{
-    border-radius: 50px;
+.messenger-btIcon2 > button{
+    width: 13%;
     height: 40px;
-    margin-top: 12px;
+    font-size: 28px;
+    color: #606770;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
 }
-.col-md-2 > img{
-    width: 90%;
-    height: auto;
-    border-radius: 50px;
+.messenger-btIcon2 > button:hover{
+    background-color: #f0f2f5;
 }
-/* friend list */
-.friend-list{
-    width: 90%;
-    float: left;
-    margin-left: 5%;
-    /* width: 100%;
+/* chat box */
+.chat-box{
+    width: 75%;
+    height: 60px;
+    position: fixed;
+    left: 25%;
+    right: 0;
+    bottom: 1%;
+}
+.messenger-btIcon3{
+    width: 15%;
+    text-align: left;
     position: absolute;
+    top: 20%;
     left: 0;
-    right: 0; */
 }
-#carouselExampleControls{
-    width: 90%;
-    box-shadow: 0px 0px 20px #adadad;
-    position: absolute;
-    left: 5%;
-    right: 5%;
-}
-.multy-card{
-    display: flex;
-}
-.multy-card > .card{
-    width: 33%;
-    margin-right: 5px;
-}
-/* from bài viết */
-.main-content{
-    float: left;
-    margin-top: 45%;
-    /* position: absolute;
-    top: 650px;
-    left: 0;
-    right: 0; */
-}
-.main-content > .card{
-    width: 45%;
-    margin: auto; 
-    margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #adadad;
-}
-.main-content > .card > .row{
+.messenger-btIcon3 > button{
+    width: 13%;
+    height: 40px;
+    font-size: 24px;
+    color: #388eff;
+    background: none;
+    border: none;
+    border-radius: 50%;
     margin-left: 10px;
 }
-.card-footer > .btn-group > button:hover{
-    background-color: #d1d1d1;
+.chat-input{
+    width: 78%;
+    position: absolute;
+    left: 15%;
 }
-.btn-feeling > button{
-    width: 30%;
+.chat-input > input{
+    width: 100%;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+.messenger-btIcon4{
+    width: 10%;
+    text-align: right;
+    position: absolute;
+    top: 20%;
+    left: 86%;
+    right: 0;
+}
+.messenger-btIcon4 > button{
+    width: 13%;
+    height: 40px;
+    font-size: 28px;
+    color: #388eff;
     border: none;
     background: none;
-}
-.btn-feeling > button > img{
-    width: 70%;
-    height: auto;
-}
-.fb-comments{
-    border-top: 1px solid #cccccc;
-}
-/* Navbar phải */
-#nav2{
-    width: 25%;
-    background-color: white;
-    position: fixed;
-    left: 75%;
-    top: 60px;
-    bottom: 0;
-}
-.banner{
-    width: 100%;
-    position: absolute;
-    top: 3%;
-    left: 0;
-    right: 0;
-    bottom: 75%;
-}
-.banner1{
-    width: 90%;
-    position: absolute;
-    top: 0;
-    left: 5%;
-    right: 5%;
-    bottom: 53%;
-    border: none;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 10px #adadad;
-}
-.banner1 >img{
-    width: 40%;
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.banner1 > p{
-    width: 60%;
-    position: absolute;
-    top: 35%;
-    left: 40%;
-}
-.banner1:hover{
-    background-color: #d1d1d1;
-}
-.banner2{
-    width: 90%;
-    position: absolute;
-    top: 53%;
-    left: 5%;
-    right: 5%;
-    bottom: 0;
-    border: none;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 10px #adadad;
-}
-.banner2 >img{
-    width: 40%;
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.banner2 > p{
-    width: 60%;
-    position: absolute;
-    top: 35%;
-    left: 40%;
-}
-.banner2:hover{
-    background-color: #d1d1d1;
-}
-.friend-card{
-    width: 90%;
-    height: 17%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #adadad;
-    position: absolute;
-    top: 27%;
-    left: 5%;
-    right: 5%;
-} 
-.friend-card:hover{
-    background-color: #d1d1d1;
-}
-.friend-card-header{
-    position: absolute;
-    top: 10%;
-    left: 25%;
-    right: 30%;
-}
-.friend-card > img{
-    width: 20%;
-    height: auto;
     border-radius: 50%;
-    position: absolute;
-    top: 10%;
-    left: 2%;
-    right: 50%;
-} 
-.friend-card > .friend-card-header > p{
-    font-size: 14px;
-    font-weight: bold;
-}                                                      
-.friend-card > .friend-card-body{
-    position: absolute;
-    top: 65%;
-    left: 45%;
-    right: 0;
-    bottom: 0;
-}
-.friend-list2{
-    width: 100%;
-    position: absolute;
-    top: 45%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-.kttt{
-    width: 90%;
-    height: 15%;
-    border: none;
-    border-radius: 10px;
-    margin-top: 1%;
-    margin-left: 5%;
-    background-color: white;
-    box-shadow: 0 0 3px #adadad;
-}
-.krr > img{
-    width: 13%;
-    height: auto;
-    border-radius: 50%;
-    margin-top: -2%;
-    margin-left: -80%;
-}
-.kttt:hover{
-    background-color: gainsboro;
-}
-.kttt>.krr > p{
-    width: 50%;
-    font-weight: bold;
-    margin-top: -13%;
-    margin-left: 10%;
 }

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a5fd4c580f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/messenger.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="swap">
+        <div class="header">
+            <!-- header -->
+        <div class="header">
+            <!-- search bar -->
+            <div class="search-bar">
+              <div class="logo">
+                <img src="\img\facebook_logo_icon.png" alt="">
+              </div>
+              <div class="search">
+                <input type="text" placeholder="  Search facebook">
+              </div>
+            </div>
+            <!-- home bar -->
+            <div class="home">
+              <div class="bg-home">
+                <button><a href="/index.html"><i class="fa-solid fa-house"></i></a></button>
+              </div>
+              <div class="bg-home">
+                <button><a href="#"><i class="fa-solid fa-tv"></i></a></button>
+              </div>
+              <div class="bg-home">
+                <button><a href="#"><i class="fa-solid fa-store"></i></a></button>
+              </div>
+              <div class="bg-home">
+                <button><a href="#"><i class="fa-solid fa-users"></i></a></button>
+              </div>
+              <div class="bg-home">
+                <button><a href="#"><i class="fa-solid fa-gamepad"></i></a></button>
+              </div>
+            </div>
+            <!-- user bar -->
+            <div class="user">
+              <div class="bg-user">
+                <button><i class="fa-solid fa-bars"></i></button>
+              </div>
+              <div class="bg-user">
+                <button><i class="fa-solid fa-bell" onclick="notification_bt_oppen()"></i></button>
+              </div>
+              <div class="bg-user">
+                <button id="bt-user" onclick="userBox()"><img src="\img\userCarrd.jpg" alt=""></button>
+              </div>
+            </div>
+            <!-- user box -->
+            <div class="main-user-box" id="fun-user-box">
+              <div class="bt-exit">
+                  <button onclick="userbox_bt_exit()">
+                      <i class="fa-solid fa-circle-xmark"></i>
+                  </button>
+              </div>
+              <div class="header-user-box">
+                  <div class="avt-user-box">
+                      <img src="img\userCarrd.jpg" alt="">
+                      <p>User Name</p>
+                  </div>
+                  <hr>
+                  <div class="profile-user-box-link">
+                      <a href="/profile.html">see all profile</a>
+                  </div>
+              </div>
+              <div class="foodter-user-box">
+                  <div class="foodter-user-item">
+                      <a href="#">
+                          <i class="fa-solid fa-gear"></i>
+                          <p>Settings & privacy</p>
+                      </a>
+                  </div>
+                  <div class="foodter-user-item">
+                      <a href="#">
+                          <i class="fa-solid fa-circle-question"></i>
+                          <p>Help & support</p>
+                      </a>
+                  </div>
+                  <div class="foodter-user-item">
+                      <a href="#">
+                          <i class="fa-solid fa-moon"></i>
+                          <p>Display & accessibility</p>
+                      </a>
+                  </div>
+                  <div class="foodter-user-item">
+                      <a href="#">
+                          <i class="fa-solid fa-clipboard-question"></i>
+                          <p>give feedback</p>
+                      </a>
+                  </div>
+                  <div class="foodter-user-item">
+                      <a href="/LoginFacebook.html">
+                          <i class="fa-solid fa-right-from-bracket"></i>
+                          <p>Log out</p>
+                      </a>
+                  </div>
+              </div>
+          </div>
+            <!-- notification box -->
+            <div class="notification-main" id="notification">
+              <div class="notification-header">
+                  <div class="notification-txtHeader">
+                      <p>Notifications</p>
+                  </div>
+                  <div class="notification-btIcon">
+                      <button>
+                          <i class="fa-solid fa-ellipsis"></i>
+                      </button>
+                      <button onclick="notification_bt_exit()">
+                          <i class="fa-solid fa-circle-xmark"></i>
+                      </button>
+                  </div>
+              </div>
+              <div class="notification-foodter">
+                  <div class="notification">
+                      <div class="notification-box">
+                          <div class="notification-box-icon">
+                              <img src="\img\userCarrd.jpg" alt="">
+                          </div>
+                          <div class="notification-box-name">
+                              <p>Notifications 1</p>
+                              <p>1 hours ago</p>
+                          </div>
+                          <div class="notification-box-menu">
+                              <button>
+                                  <i class="fa-solid fa-ellipsis"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="notification2">
+                      <div class="notification-box">
+                          <div class="notification-box-icon">
+                              <img src="\img\userCarrd.jpg" alt="">
+                          </div>
+                          <div class="notification-box-name">
+                              <p>Notifications 2</p>
+                              <p>2 hours ago</p>
+                          </div>
+                          <div class="notification-box-menu">
+                              <button>
+                                  <i class="fa-solid fa-ellipsis"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="notification3">
+                      <div class="notification-box">
+                          <div class="notification-box-icon">
+                              <img src="\img\userCarrd.jpg" alt="">
+                          </div>
+                          <div class="notification-box-name">
+                              <p>Notifications 3</p>
+                              <p>A day ago</p>
+                          </div>
+                          <div class="notification-box-menu">
+                              <button>
+                                  <i class="fa-solid fa-ellipsis"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="notification4">
+                      <div class="notification-box">
+                          <div class="notification-box-icon">
+                              <img src="\img\userCarrd.jpg" alt="">
+                          </div>
+                          <div class="notification-box-name">
+                              <p>Notifications 4</p>
+                              <p>2 day ago</p>
+                          </div>
+                          <div class="notification-box-menu">
+                              <button>
+                                  <i class="fa-solid fa-ellipsis"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="notification5">
+                      <div class="notification-box">
+                          <div class="notification-box-icon">
+                              <img src="\img\userCarrd.jpg" alt="">
+                          </div>
+                          <div class="notification-box-name">
+                              <p>Notifications</p>
+                              <p>a week ago</p>
+                          </div>
+                          <div class="notification-box-menu">
+                              <button>
+                                  <i class="fa-solid fa-ellipsis"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="notification6">
+                      <div class="notification-box">
+                          <div class="notification-box-icon">
+                              <img src="\img\userCarrd.jpg" alt="">
+                          </div>
+                          <div class="notification-box-name">
+                              <p>Notifications 6</p>
+                              <p>a week ago</p>
+                          </div>
+                          <div class="notification-box-menu">
+                              <button>
+                                  <i class="fa-solid fa-ellipsis"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        </div>
+        <div class="main">
+            <div class="nav1">
+                <!-- nav left -->
+            <div id="nav1">
+                <div class="messenger-header1">
+                    <div class="messenger-txtHeader">
+                      <p>Chats</p>
+                    </div>
+                    <div class="messenger-btIcon1">
+                      <button>
+                        <i class="fa-solid fa-ellipsis"></i>
+                      </button>
+                      <button>
+                        <i class="fa-solid fa-video"></i>
+                      </button>
+                      <button>
+                        <i class="fa-solid fa-paper-plane"></i>
+                      </button>
+                    </div>
+                    <div class="messenger-search1">
+                      <input type="text" placeholder=" Search in Messenger">
+                    </div>
+                </div>
+                <div class="avatar-profile">
+                <div class="icon">
+                    <ul>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href=""#><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                        <li class="messengerbox">
+                            <div>
+                              <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+                                      alt="">
+                            </div>
+                            <div class="text-icon"><a href="#"><label>Messenger box</label></a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content">
+                <div class="messengerbox-header">
+                    <div class="messengerbox-header-icon">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png" alt="">
+                    </div>
+                      <div class="messengerbox-header-text-icon">
+                        <label>Messenger box</label>
+                    </div>
+                    <div class="messenger-btIcon2">
+                        <button>
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        <button>
+                          <i class="fa-solid fa-video"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="chat-box">
+                    <div class="messenger-btIcon3">
+                        <button>
+                            <i class="fa-solid fa-circle-plus"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-image"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-face-grin-wide"></i>
+                        </button>
+                        <button>
+                            <i class="fa-solid fa-camera"></i>
+                         </button>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="  Aa">
+                    </div>
+                    <div class="messenger-btIcon4">
+                        <button>
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/css/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
