@@ -1,3 +1,4 @@
+// document.addEventListener("DOMContentLoaded" , ()=>{
 // button oppen messenger and exit userbox , notification
 function myFuction(){
     document.getElementById('messenger').style.display='block'; 
@@ -7,6 +8,15 @@ function myFuction(){
 // button exit messenger
 function messenger_bt_exit(){
     document.getElementById('messenger').style.display='none';
+}
+// oppen messenger minibox
+function op_messenger_mnbox(){
+    document.getElementById('messenger-mnbox').style.display= 'block';
+    document.getElementById('messenger').style.display='none';
+}
+// exit messenger minibox
+function messenger_mnbox_bt_exit(){
+    document.getElementById('messenger-mnbox').style.display= 'none';
 }
 // oppen user box and exit messenger , notification
 function userBox(){
@@ -40,3 +50,4 @@ function notification_bt_oppen(){
 function notification_bt_exit(){
     document.getElementById('notification').style.display='none';
 }
+// })

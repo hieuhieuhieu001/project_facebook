@@ -1,0 +1,932 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f0f2f5;
+}
+.swap{
+    position: relative;
+}
+/* đầu trang */
+.header{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 0 15px #dfe1e4;
+}
+/* search */
+.search-bar{
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.search-bar > .logo > img{
+   width: 70%;
+   height: auto;
+   position: absolute;
+   top: 5px;
+   left: 10px;
+}
+.search-bar > .logo{
+    width: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.search-bar > .search > input{
+    width: 65%;
+    border: none;
+    border-radius: 30px;
+    background-color: #f0f2f5;
+    position: absolute;
+    top: 10px;
+    left: 20%;
+    bottom: 10px;
+}
+/* nút điều khiển trang chủ */
+.home{
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    bottom: 0;
+    display: flex;
+}
+.home > .bg-home{
+    width: 20%;
+}
+.home > .bg-home > button{
+    width: 95%;
+    height: 90%;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    color: #65676b;
+    font-size: 30px;
+    background-color: white;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.home > .bg-home > button:hover{
+    background-color: #f0f2f5;
+}
+.home > .bg-home > button > a{
+    color: #65676b;
+}
+/* user */
+.user{
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 75%;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: right;
+}
+.user > .bg-user{
+    width: 15%;
+}
+.user > .bg-user > button{
+    width: 95%;
+    height: 80%;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    /* color: white; */
+    font-size: 30px;
+    background-color: #e4e6eb;
+    margin-top: 5px;
+}
+.user > .bg-user > button > img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.user > .bg-user > button:hover{
+    background-color: #cbcbcb;
+}
+/* messenger navbar */
+.messenger-main{
+    width: 25%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 75%;
+    display: none;
+    box-shadow: 0px 0px 20px #adadad;
+}
+.messenger-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 80%;
+    
+}
+.messenger-txtHeader{
+    width: 50%;
+    /* color: white; */
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 5%;
+}
+.messenger-btIcon{
+    width: 50%;
+    position: absolute;
+    top: 1%;
+    left: 55%;
+}
+.messenger-btIcon > button{
+    width: 20%;
+    height: 35px;
+    font-size: 20px;
+    color: #606770;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
+.messenger-btIcon > button > a{
+    color: #606770;
+}
+.messenger-btIcon > button:hover{
+    background-color: #f0f2f5;
+}
+.messenger-search{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+.messenger-search > input{
+    width: 90%;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    background-color: #f0f2f5;
+}
+.messenger-foodter{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.messenger{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+}
+.messenger:hover {
+    background-color: #d1d1d1;
+}
+.messenger:hover .messenger-box-menu{
+    display: block;
+}
+.messenger-box-icon{
+    width: 25%;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+.messenger-box-icon > img{
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+}
+.messenger-box-name{
+    font-weight: bold;
+    color: #606770;
+    width: 60%;
+    position: absolute;
+    top:0;
+    left: 25%;
+}
+.messenger-box-menu{
+    width: 15%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 85%;
+    right: 0;
+    bottom: 0;
+}
+.messenger-box-menu > button{
+    width: 77%;
+    font-size: 24px;
+    color: #676d76;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 15%;
+}
+.messenger-box-menu > button:hover{
+    background-color: #cccccc;
+}
+/* messenger box 1 */
+.messenger1{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 16%;
+    left: 5%;
+    right: 5%;
+}
+.messenger1:hover {
+    background-color: #d1d1d1;
+}
+.messenger1:hover .messenger-box-menu{
+    display: block;
+}
+/* messenger box2 */
+.messenger2{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 32%;
+    left: 5%;
+    right: 5%;
+}
+.messenger2:hover {
+    background-color: #d1d1d1;
+}
+.messenger2:hover .messenger-box-menu{
+    display: block;
+}
+/* messenger box3 */
+.messenger3{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 48%;
+    left: 5%;
+    right: 5%;
+}
+.messenger3:hover {
+    background-color: #d1d1d1;
+}
+.messenger3:hover .messenger-box-menu{
+    display: block;
+}
+/* messenger box4 */
+.messenger4{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 64%;
+    left: 5%;
+    right: 5%;
+}
+.messenger4:hover {
+    background-color: #d1d1d1;
+}
+.messenger4:hover .messenger-box-menu{
+    display: block;
+}
+/* messenger box5 */
+.messenger5{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    right: 5%;
+}
+.messenger5:hover {
+    background-color:#d1d1d1;
+}
+.messenger5:hover .messenger-box-menu{
+    display: block;
+}
+/* messenger minibox */
+.messenger-minibox{
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    width: 20%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+    box-shadow: 0 0 10px #adadad;
+    display: none;
+}
+.messenger-header-mnbox{
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #adadad;
+}
+.messenger-header-mnbox > .messenger-txtHeader{
+    width: 40%;
+    display: flex;
+}
+.messenger-header-mnbox > .messenger-txtHeader > img{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+.messenger-header-mnbox > .messenger-txtHeader > p{
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 5%;
+}
+/* chat box */
+.messenger-ipchat{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 3%;
+}
+.messenger-btIcon1{
+    width: 40%;
+    position: absolute;
+    top: 20%;
+}
+.messenger-btIcon1 > button{
+    width: 13%;
+    height: 40px;
+    font-size: 20px;
+    color: #388eff;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+.chat-input{
+    width: 55%;
+    position: absolute;
+    left: 35%;
+}
+.chat-input > input{
+    width: 100%;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+.messenger-btIcon2{
+    width: 10%;
+    text-align: right;
+    position: absolute;
+    top: 20%;
+    left: 82%;
+    right: 0;
+}
+.messenger-btIcon2 > button{
+    width: 13%;
+    height: 40px;
+    font-size: 20px;
+    color: #388eff;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    margin-top: 6px;
+}
+/* user box */
+.main-user-box{
+    width: 25%;
+    height: 600%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 20px #adadad;
+    position: absolute;
+    top: 60px;
+    left: 75%;
+    right: 0;
+    display: none;
+}
+.main-user-box >  .bt-exit > button{
+    font-size: 24px;
+    color: #606770;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 2%;
+    z-index: 2;
+}
+/* notification box */
+.notification-main{
+    width: 25%;
+    height: 500px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 75%;
+    display: none;
+    box-shadow: 0px 0px 20px #adadad;
+}
+.notification-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 90%;
+    
+}
+.notification-txtHeader{
+    width: 50%;
+    /* color: white; */
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 5%;
+}
+.notification-btIcon{
+    width: 50%;
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+.notification-btIcon > button{
+    width: 20%;
+    height: 35px;
+    font-size: 20px;
+    color: #606770;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
+.notification-btIcon > button:hover{
+    background-color: #f0f2f5;
+}
+.notification-foodter{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.notification{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+}
+.notification:hover {
+    background-color: #d1d1d1;
+}
+.notification:hover .notification-box-menu{
+    display: block;
+}
+.notification-box-icon{
+    width: 25%;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+}
+.notification-box-icon > img{
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+}
+.notification-box-name{
+    font-weight: bold;
+    color: #606770;
+    width: 60%;
+    position: absolute;
+    top:0;
+    left: 25%;
+}
+.notification-box-menu{
+    width: 15%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 85%;
+    right: 0;
+    bottom: 0;
+    /* z-index: 3; */
+}
+.notification-box-menu > button{
+    width: 77%;
+    font-size: 24px;
+    color: #676d76;
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 15%;
+}
+.notification-box-menu > button:hover{
+    background-color: #cccccc;
+}
+.notification:hover .notification-box-menu{
+    display: block;
+}
+/* notification box2 */
+.notification2{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+}
+.notification2:hover {
+    background-color: #d1d1d1;
+}
+.notification2:hover .notification-box-menu{
+    display: block;
+}
+/* notification box3 */
+.notification3{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    right: 5%;
+}
+.notification3:hover {
+    background-color: #d1d1d1;
+}
+.notification3:hover .notification-box-menu{
+    display: block;
+}
+/* notification box4 */
+.notification4{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    right: 5%;
+}
+.notification4:hover {
+    background-color: #d1d1d1;
+}
+.notification4:hover .notification-box-menu{
+    display: block;
+}
+/* notification box5 */
+.notification5{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    right: 5%;
+}
+.notification5:hover {
+    background-color: #d1d1d1;
+}
+.notification5:hover .notification-box-menu{
+    display: block;
+}
+/* notification box6 */
+.notification6{
+    width: 90%;
+    height: 15%;
+    border-radius: 10px;
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    right: 5%;
+}
+.notification6:hover {
+    background-color: #d1d1d1;
+}
+.notification6:hover .notification-box-menu{
+    display: block;
+}
+/* user box */
+.main-user-box{
+    width: 25%;
+    height: 600%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 20px #adadad;
+    position: absolute;
+    top: 60px;
+    left: 75%;
+    right: 0;
+    display: none;
+}
+.main-user-box >  .bt-exit > button{
+    font-size: 24px;
+    color: #606770;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 2%;
+    z-index: 2;
+}
+/* header user box */
+.header-user-box{
+    width: 90%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 20px #a7a6a6;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+    right: 5%;
+    bottom: 70%;
+}
+.avt-user-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40%;
+    border-radius: 10px;
+}
+.avt-user-box:hover{
+    background-color: #d1d1d1;
+}
+.avt-user-box > img{
+    width: 15%;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 3%;
+}
+.avt-user-box > p{
+    color: #606770;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 30%;
+    left: 23%;
+}
+.header-user-box > hr{
+    width: 90%;
+    color: #606770;
+    margin: auto;
+    margin-top: 20%;
+}
+.profile-user-box-link{
+    border-radius: 10px;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}.profile-user-box-link:hover{
+    background-color: #d1d1d1;
+}
+.profile-user-box-link > a{
+    /* color: white; */
+    text-decoration: none;
+    margin-left: 5%;
+}
+/* foodter user box */
+.foodter-user-box{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+}
+.foodter-user-item{
+    width: 100%;
+    height: 21%;
+    border-radius: 10px;
+}
+.foodter-user-item:hover{
+    background-color: #d1d1d1;
+}
+.foodter-user-item > a{
+    width: 90%;
+    display: flex;
+    text-decoration: none;
+    color: #606770;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.foodter-user-item > a > i{
+    width: 10%;
+    margin-top: 4%;
+    margin-left: 3%;
+}
+.foodter-user-item > a > p{
+    width: 80%;
+    margin-top: 3%;
+}
+/* border */
+#main{
+    width: 100%;
+    position: absolute;
+}
+/* NAV trái */
+#nav1{
+    width: 25%;
+    padding-top: 10px;
+    background-color: white;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+.watch{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 75%;
+    bottom: 77%;
+    background-color: white;
+    border-bottom: 1px solid #676d76;
+    display: flex;
+}
+.watch-txtHeader{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 3%;
+    margin-left: 5%;
+    width: 80%;
+    height: 10%;
+}
+.watch-btIcon{
+    width: 10%;
+    height: 10%;
+    margin-top: 3%;
+}
+.watch-btIcon > button{
+    width: 110%;
+    font-size: 28px;
+    color: #606770;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
+.watch-btIcon > button:hover{
+    background-color: #f0f2f5;
+}
+.watch-search > input{
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    right: 5%;
+    bottom: 0%;
+    background-color: #f0f2f5;
+}
+::-webkit-scrollbar{
+    width: 10px;
+    background: lightgray;
+
+}
+::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 5px;
+}
+.text-icon > label  a{
+    text-decoration: none;
+    color: black;
+}
+.avatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.icon{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.icon > ul{
+    list-style-type: none;
+    margin-left: -5%;
+}
+.icon > ul > li{
+    width: 95%;
+    height: 50px;
+    border-radius: 10px;
+}
+.icon > ul > li:hover{
+    background-color: #d1d1d1;
+}
+.icon > ul > p{
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.icon > ul > hr{
+    width: 90%;
+}
+.watch-icon{
+    font-size: 28px;
+    margin-top: -3%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.watch-icon > img{
+    width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+.text-icon > a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: left;
+}
+.watch-bar{
+    display: flex;
+    /*width: 36px;*/
+    /*height: 36px;*/
+    padding-top: 10px;
+}
+.content{
+    width: 75%;
+    position: absolute;
+    top: 60px;
+    left: 25%;
+    right: 0;
+    bottom: 0;
+}
+/* bai dang */
+.card{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #adadad;
+}
+.col-md-2{
+    width: 10%;
+}
+.card > .row{
+    margin-left: 10px;
+}
+.card > .row > .col-md-2 > img{
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+.card > .row > .col-md-3{
+    width: 15%;
+    height: auto;
+    border-radius: 50px;
+}
+.card-body > video{
+    width: 100%;
+    height: auto;
+}
+.card-footer > .btn-group > button:hover{
+    background-color: #d1d1d1;
+}
+.btn-feeling > button{
+    width: 30%;
+    border: none;
+    background: none;
+}
+.btn-feeling > button > img{
+    width: 70%;
+    height: auto;
+}
+.fb-comments{
+    border-top: 1px solid #cccccc;
+}

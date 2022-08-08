@@ -146,7 +146,7 @@ body{
     width: 50%;
     position: absolute;
     top: 1%;
-    left: 50%;
+    left: 55%;
 }
 .messenger-btIcon > button{
     width: 20%;
@@ -321,6 +321,91 @@ body{
 }
 .messenger5:hover .messenger-box-menu{
     display: block;
+}
+/* messenger minibox */
+.messenger-minibox{
+    position: fixed;
+    bottom: 0;
+    right: 5%;
+    width: 20%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+    box-shadow: 0 0 10px #adadad;
+    display: none;
+}
+.messenger-header-mnbox{
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #adadad;
+}
+.messenger-header-mnbox > .messenger-txtHeader{
+    width: 40%;
+    display: flex;
+}
+.messenger-header-mnbox > .messenger-txtHeader > img{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+.messenger-header-mnbox > .messenger-txtHeader > p{
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 5%;
+}
+/* chat box */
+.messenger-ipchat{
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 3%;
+}
+.messenger-btIcon1{
+    width: 40%;
+    position: absolute;
+    top: 20%;
+}
+.messenger-btIcon1 > button{
+    width: 13%;
+    height: 40px;
+    font-size: 20px;
+    color: #388eff;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+.chat-input{
+    width: 55%;
+    position: absolute;
+    left: 35%;
+}
+.chat-input > input{
+    width: 100%;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+.messenger-btIcon2{
+    width: 10%;
+    text-align: right;
+    position: absolute;
+    top: 20%;
+    left: 82%;
+    right: 0;
+}
+.messenger-btIcon2 > button{
+    width: 13%;
+    height: 40px;
+    font-size: 20px;
+    color: #388eff;
+    border: none;
+    background: none;
+    border-radius: 50%;
+    margin-top: 6px;
 }
 /* user box */
 .main-user-box{

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a5fd4c580f.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/index.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./css/index.js"></script>
+    <title>Facebook</title>
 </head>
 <body>
     <!-- comment facebook -->
@@ -20,7 +21,7 @@
           <!-- search bar -->
           <div class="search-bar">
             <div class="logo">
-              <img src="\img\facebook_logo_icon.png" alt="">
+              <img src=".\img\facebook_logo_icon.png" alt="">
             </div>
             <div class="search">
               <input type="text" placeholder="  Search facebook">
@@ -29,10 +30,10 @@
           <!-- home bar -->
           <div class="home">
             <div class="bg-home">
-              <button><a href="/index.html"><i class="fa-solid fa-house"></i></a></button>
+              <button><a href="./index.html"><i class="fa-solid fa-house"></i></a></button>
             </div>
             <div class="bg-home">
-              <button><a href="#"><i class="fa-solid fa-tv"></i></a></button>
+              <button><a href="./watch.html"><i class="fa-solid fa-tv"></i></a></button>
             </div>
             <div class="bg-home">
               <button><a href="#"><i class="fa-solid fa-store"></i></a></button>
@@ -56,7 +57,7 @@
               <button><i class="fa-solid fa-bell" onclick="notification_bt_oppen()"></i></button>
             </div>
             <div class="bg-user">
-              <button id="bt-user" onclick="userBox()"><img src="\img\userCarrd.jpg" alt=""></button>
+              <button id="bt-user" onclick="userBox()"><img src=".\img\userCarrd.jpg" alt=""></button>
             </div>
           </div>
           <!-- messenger box -->
@@ -70,7 +71,7 @@
                   <i class="fa-solid fa-ellipsis"></i>
                 </button>
                 <button>
-                  <a href="/messenger.html"><i class="fa-solid fa-maximize"></i></a>
+                  <a href="./messenger.html"><i class="fa-solid fa-maximize"></i></a>
                 </button>
                 <button>
                   <i class="fa-solid fa-video"></i>
@@ -84,10 +85,10 @@
               </div>
             </div>
             <div class="messenger-foodter">
-              <div class="messenger">
+              <div class="messenger" onclick="op_messenger_mnbox()">
                 <div class="messenger-box">
                   <div class="messenger-box-icon">
-                    <img src="\img\userCarrd.jpg" alt="">
+                    <img src=".\img\userCarrd.jpg" alt="">
                   </div>
                   <div class="messenger-box-name">
                     <p>Messenger box 1</p>
@@ -99,10 +100,10 @@
                   </div>
                 </div>
               </div>
-              <div class="messenger1">
+              <div class="messenger1" onclick="op_messenger_mnbox()">
                 <div class="messenger-box">
                   <div class="messenger-box-icon">
-                    <img src="\img\userCarrd.jpg" alt="">
+                    <img src=".\img\userCarrd.jpg" alt="">
                   </div>
                   <div class="messenger-box-name">
                     <p>Messenger box 2</p>
@@ -114,10 +115,10 @@
                   </div>
                 </div>
               </div>
-              <div class="messenger2">
+              <div class="messenger2" onclick="op_messenger_mnbox()">
                 <div class="messenger-box">
                   <div class="messenger-box-icon">
-                    <img src="\img\userCarrd.jpg" alt="">
+                    <img src=".\img\userCarrd.jpg" alt="">
                   </div>
                   <div class="messenger-box-name">
                     <p>Messenger box 3</p>
@@ -129,10 +130,10 @@
                   </div>
                 </div>
               </div>
-              <div class="messenger3">
+              <div class="messenger3" onclick="op_messenger_mnbox()">
                 <div class="messenger-box">
                   <div class="messenger-box-icon">
-                    <img src="\img\userCarrd.jpg" alt="">
+                    <img src=".\img\userCarrd.jpg" alt="">
                   </div>
                   <div class="messenger-box-name">
                     <p>Messenger box 4</p>
@@ -144,10 +145,10 @@
                   </div>
                 </div>
               </div>
-              <div class="messenger4">
+              <div class="messenger4" onclick="op_messenger_mnbox()">
                 <div class="messenger-box">
                   <div class="messenger-box-icon">
-                    <img src="\img\userCarrd.jpg" alt="">
+                    <img src=".\img\userCarrd.jpg" alt="">
                   </div>
                   <div class="messenger-box-name">
                     <p>Messenger box 5</p>
@@ -159,10 +160,10 @@
                   </div>
                 </div>
               </div>
-              <div class="messenger5">
+              <div class="messenger5" onclick="op_messenger_mnbox()">
                 <div class="messenger-box">
                   <div class="messenger-box-icon">
-                    <img src="\img\userCarrd.jpg" alt="">
+                    <img src=".\img\userCarrd.jpg" alt="">
                   </div>
                   <div class="messenger-box-name">
                     <p>Messenger box 6</p>
@@ -176,6 +177,53 @@
               </div>
             </div>
           </div>
+          <!-- messenger mini box -->
+          <div class="messenger-minibox" id="messenger-mnbox">
+            <div class="messenger-header-mnbox">
+              <div class="messenger-txtHeader">
+                <img src="./img/userCarrd.jpg" alt="">
+                <p>Chat</p>
+              </div>
+              <div class="messenger-btIcon">
+                <button>
+                  <i class="fa-solid fa-phone"></i>
+                </button>
+                <button>
+                  <i class="fa-solid fa-video"></i>
+                </button>
+                <button onclick="messenger_mnbox_bt_exit()">
+                  <i class="fa-solid fa-minus"></i>
+                </button>
+                <button onclick="messenger_mnbox_bt_exit()">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+              </div>
+              </div>
+              <div class="messenger-ipchat">
+                <div class="messenger-btIcon1">
+                    <button>
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-image"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-face-grin-wide"></i>
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-camera"></i>
+                    </button>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="  Aa">
+                </div>
+                <div class="messenger-btIcon2">
+                    <button>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </button>
+                </div>
+              </div>
+          </div>
           <!-- user box -->
           <div class="main-user-box" id="fun-user-box">
             <div class="bt-exit">
@@ -185,12 +233,12 @@
             </div>
             <div class="header-user-box">
                 <div class="avt-user-box">
-                    <img src="img\userCarrd.jpg" alt="">
+                    <img src=".\img\userCarrd.jpg" alt="">
                     <p>User Name</p>
                 </div>
                 <hr>
                 <div class="profile-user-box-link">
-                    <a href="/profile.html">see all profile</a>
+                    <a href="./profile.html">see all profile</a>
                 </div>
             </div>
             <div class="foodter-user-box">
@@ -219,7 +267,7 @@
                     </a>
                 </div>
                 <div class="foodter-user-item">
-                    <a href="/LoginFacebook.html">
+                    <a href="./LoginFacebook.html">
                         <i class="fa-solid fa-right-from-bracket"></i>
                         <p>Log out</p>
                     </a>
@@ -245,7 +293,7 @@
                 <div class="notification">
                     <div class="notification-box">
                         <div class="notification-box-icon">
-                            <img src="\img\userCarrd.jpg" alt="">
+                            <img src=".\img\userCarrd.jpg" alt="">
                         </div>
                         <div class="notification-box-name">
                             <p>Notifications 1</p>
@@ -261,7 +309,7 @@
                 <div class="notification2">
                     <div class="notification-box">
                         <div class="notification-box-icon">
-                            <img src="\img\userCarrd.jpg" alt="">
+                            <img src=".\img\userCarrd.jpg" alt="">
                         </div>
                         <div class="notification-box-name">
                             <p>Notifications 2</p>
@@ -277,7 +325,7 @@
                 <div class="notification3">
                     <div class="notification-box">
                         <div class="notification-box-icon">
-                            <img src="\img\userCarrd.jpg" alt="">
+                            <img src=".\img\userCarrd.jpg" alt="">
                         </div>
                         <div class="notification-box-name">
                             <p>Notifications 3</p>
@@ -293,7 +341,7 @@
                 <div class="notification4">
                     <div class="notification-box">
                         <div class="notification-box-icon">
-                            <img src="\img\userCarrd.jpg" alt="">
+                            <img src=".\img\userCarrd.jpg" alt="">
                         </div>
                         <div class="notification-box-name">
                             <p>Notifications 4</p>
@@ -309,7 +357,7 @@
                 <div class="notification5">
                     <div class="notification-box">
                         <div class="notification-box-icon">
-                            <img src="\img\userCarrd.jpg" alt="">
+                            <img src=".\img\userCarrd.jpg" alt="">
                         </div>
                         <div class="notification-box-name">
                             <p>Notifications</p>
@@ -325,7 +373,7 @@
                 <div class="notification6">
                     <div class="notification-box">
                         <div class="notification-box-icon">
-                            <img src="\img\userCarrd.jpg" alt="">
+                            <img src=".\img\userCarrd.jpg" alt="">
                         </div>
                         <div class="notification-box-name">
                             <p>Notifications 6</p>
@@ -348,19 +396,19 @@
               <div class="avatar-profile">
                 <div>
                   <img class="avatar"
-                      src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-1/275821209_1537433039972844_6085414064181875256_n.jpg?stp=dst-jpg_p100x100&_nc_cat=104&ccb=1-7&_nc_sid=7206a8&_nc_ohc=uQ9YGDGRolwAX960-7o&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fhan2-4.fna&oh=00_AT-ffca_MuxM-e0mqxCXE7ALuOa33zvIsrKhzRNTS-rJxQ&oe=62E3E07B"
+                      src="./img/userCarrd.jpg"
                       alt="">
                   </div>
-                <div class="text-icon"><label><a href="/profile.html">profile</a></label></div>
+                <div class="text-icon"><label><a href="/profile.html">Profile</a></label></div>
               </div>
-              <div class="icon">
+              <div class="list-icon">
                   <ul>
                       <li class="friends">
                           <div>
                             <img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
                                     alt="">
                           </div>
-                          <div class="text-icon"><label>friend</label></div>
+                          <div class="text-icon"><label>Friend</label></div>
                       </li>
                       <li class="messenger-navbar">
                           <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/YF1bztyGuX-.png"
@@ -370,114 +418,114 @@
                       <li class="saved">
                           <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/2uPlV4oORjU.png"
                                     alt=""></div>
-                          <div class="text-icon"><label>saved</label></div>
+                          <div class="text-icon"><label>Saved</label></div>
                       </li>
                       <li class="group">
                           <div><img class="icon" src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png"
                                     alt=""></div>
-                          <div class="text-icon"><label>groups</label></div>
+                          <div class="text-icon"><label>Groups</label></div>
                       </li>
                       <li class="Marketplace">
-                          <div><img class="icon-marketplace"
+                          <div><img class="icon"
                                     src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/9BDqQflVfXI.png" alt=""></div>
                           <div class="text-icon"><label>Marketplace</label></div>
                       </li>
                     </ul>
                         <ul id="more">
                           <li class="fundraising-campaign" id="fundraising-campaign">
-                              <div><img class="icon-fundraising-campaign"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/A2tHTy6ibgT.png" alt="">
                               </div>
-                              <div class="text-icon"><label>fundraising campaign</label></div>
+                              <div class="text-icon"><label>Fundraising campaign</label></div>
                           </li>
                           <li class="play-game" id="play-game">
-                              <div><img class="icon-play-game"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yn/r/XEWvxf1LQAG.png" alt="">
                               </div>
-                              <div class="text-icon"><label>play-game</label></div>
+                              <div class="text-icon"><label>Play game</label></div>
                           </li>
-                          <li class="facebook-pay" id=facebook-pay">
-                              <div><img class="icon-facebook-pay"
+                          <li class="facebook-pay" id="facebook-pay">
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/xH4w-lk44we.png" alt="">
                               </div>
-                              <div class="text-icon"><label>facebook-face</label></div>
+                              <div class="text-icon"><label>Facebook face</label></div>
                           </li>
                           <li class="most-recent" id="most-recent">
-                              <div><img class="icon-most-recent"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/3dN1QwOLden.png" alt="">
                               </div>
-                              <div class="text-icon"><label>most recent</label></div>
+                              <div class="text-icon"><label>Most recent</label></div>
                           </li>
                           <li class="blood-donation" id="blood-donation">
-                              <div><img class="icon-blood-donation"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/9LIH24rbn9J.png" alt="">
                               </div>
-                              <div class="text-icon"><label>blood-donation</label></div>
+                              <div class="text-icon"><label>Blood donation</label></div>
                           </li>
                           <li class="events" id="events">
-                              <div><img class="icon-events"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/XXwl2m1vjqM.png" alt="">
                               </div>
                               <div class="text-icon"><label>events</label></div>
                           </li>
                           <li class="emotional-health" id="emotional-health">
-                              <div><img class="icon-emotional-health"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/y5/r/GyZZ7Jrr5OV.png" alt="">
                               </div>
-                              <div class="text-icon"><label>emotional-health</label></div>
+                              <div class="text-icon"><label>Emotional health</label></div>
                           </li>
                           <li class="pages" id="pages">
-                              <div><img class="icon-pages"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png" alt="">
                               </div>
-                              <div class="text-icon"><label>pages</label></div>
+                              <div class="text-icon"><label>Pages</label></div>
                           </li>
                           <li class="ad-manager" id=" ad-manager" x>
-                              <div><img class="icon-ad-manager"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/qR88GIDM38e.png" alt="">
                               </div>
-                              <div class="text-icon"><label>ad-manager</label></div>
+                              <div class="text-icon"><label>Ad manager</label></div>
                           <li class="climate-science-center" id="climate-science-center">
-                              <div><img class="icon-climate-science-center"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/tKwWVioirmj.png" alt="">
                               </div>
-                              <div class="text-icon"><label>climate-science-center</label></div>
+                              <div class="text-icon"><label>Climate science center</label></div>
                           </li>
                           <li class="ad-center" id="ad-center">
-                              <div><img class="icon-ad-center"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/_JPdPzLmp9j.png" alt="">
                               </div>
-                              <div class="text-icon"><label>ad-center</label></div>
+                              <div class="text-icon"><label>Ad center</label></div>
                           </li>
                           <li class="emergency-response" id="emergency-response">
-                              <div><img class="icon-emergency-response"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/y7p-dcTnGV_.png" alt="">
                               </div>
-                              <div class="text-icon"><label>emergency-response</label></div>
+                              <div class="text-icon"><label>Emergency response</label></div>
                           </li>
                           <li class="video-play-game" id="video-play-game">
-                              <div><img class="icon-video-play-game"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yI/r/eVgQ0NIygAW.png" alt="">
                               </div>
-                              <div class="text-icon"><label>video-play-game</label></div>
+                              <div class="text-icon"><label>Video play game</label></div>
                           </li>
                           <li class="video-live" id="video-live">
-                              <div><img class="icon-video-live"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yv/r/GmeV2VDbZTi.png" alt="">
                               </div>
-                              <div class="text-icon"><label>video-live</label></div>
+                              <div class="text-icon"><label>Video live</label></div>
                           </li>
                           <li class="watch" id="watch">
-                              <div><img class="icon-watch"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png" alt="">
                               </div>
-                              <div class="text-icon"><label>watch</label></div>
+                              <div class="text-icon"><label>Watch</label></div>
                           </li>
                           <li class="favorites" id="favorites">
-                              <div><img class="icon-favorites"
+                              <div><img class="icon"
                                         src="https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/Zy9sJGThmCS.png" alt="">
                               </div>
-                              <div class="text-icon"><label>favorites</label></div>
+                              <div class="text-icon"><label>Favorites</label></div>
                           </li>
                         </ul>
                   <button onclick="readmore()" class="btn-read-more" id="read-more"><i class="fa-solid fa-angle-down"></i> See more</button>
@@ -485,17 +533,17 @@
                   <div  class="title-shortcuts"><p>Your shortcuts</p></div>
                     <ul>
                         <li class="shortcut">
-                            <img class="image-shortcut" src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/291585383_2302187373269554_1156178413762692187_n.jpg?stp=dst-jpg_s960x960&_nc_cat=1&ccb=1-7&_nc_sid=8631f5&_nc_ohc=7CC6456xR98AX9mdwi3&_nc_ht=scontent.fhan2-4.fna&oh=00_AT8VuI8gG0izsymCxiRHeZu-sf0a6IxW844eklwv3U_dFw&oe=62E9C65E" alt="">
+                            <img class="image-shortcut" src="https://thuthuatnhanh.com/wp-content/uploads/2019/12/anh-anime-dep-de-thuong.jpg" alt="">
                             <label class="text-shortcut">Đáy xã hội</label>
                             <a  class="text-shortcut" href="https://www.facebook.com/groups/569483358139838"><div>        </div></a>
                         </li>
                         <li class="shortcut">
-                            <img class="image-shortcut" src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/285123477_10216829712055729_186812270908435444_n.png?stp=dst-jpg_s960x960&_nc_cat=1&ccb=1-7&_nc_sid=8631f5&_nc_ohc=vTpdxZUEiD0AX-WcpUd&_nc_ht=scontent.fhan2-4.fna&oh=00_AT_TYFQOhqofXx-YRXW2h6XURAuDF9xlzskyLuIQcdBsZw&oe=62E976D2" alt="">
+                            <img class="image-shortcut" src="https://thuthuatnhanh.com/wp-content/uploads/2019/12/anh-anime-dep-de-thuong.jpg" alt="">
                             <label class="text-shortcut">VOZ.VN</label>
                             <a class="text-shortcut" href="https://www.facebook.com/groups/voz.ver3"> <div>                   </div></a>
                         </li>
                         <li class="shortcut">
-                            <img class="image-shortcut" src="https://scontent.fhan2-1.fna.fbcdn.net/v/t39.30808-6/288814081_2958952277738504_2721286312402816092_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8631f5&_nc_ohc=FSXzUOLWrREAX-X3cNx&_nc_ht=scontent.fhan2-1.fna&oh=00_AT-o4ebz3RJmmdk4DZSBCNCfueyk0apFW5SlrYdb-FSCpQ&oe=62E93A37" alt="">
+                            <img class="image-shortcut" src="https://thuthuatnhanh.com/wp-content/uploads/2019/12/anh-anime-dep-de-thuong.jpg" alt="">
                             <label class="text-shortcut">[voz]-f17 With Love !</label>
                             <a class="text-shortcut" href="https://www.facebook.com/groups/vozer.luv"><div>                      </div></a>
                         </li>
@@ -507,7 +555,7 @@
                 <!-- from đăng bài viết -->
                 <div class="from-dangbai">
                     <div class="mb-3 row">
-                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                        <img src=".\img\userCarrd.jpg" alt="" class="col-form-label">
                         <div class="d-grid gap-2 col-sm-10">
                             <button class="btn btn-light btn-sm text-start" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
                               What`s on your mind ?
@@ -538,7 +586,7 @@
                             <div class="modal-body">
                                 <div class="row g-3">
                                     <div class="col-md-2">
-                                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                                        <img src=".\img\userCarrd.jpg" alt="" class="col-form-label">
                                     </div>
                                     <div class="col-md-4">
                                         <label class="form-label text-start fw-bold">User Name</label>
@@ -567,7 +615,7 @@
                       <div class="carousel-item active">
                         <div class="multy-card">
                             <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
@@ -577,7 +625,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
@@ -587,41 +635,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Confirm</button>
-                                    <button class="btn btn-secondary" type="button">Delete</button>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="multy-card">
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Confirm</button>
-                                    <button class="btn btn-secondary" type="button">Delete</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Card title</h5>
-                                  <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" type="button">Confirm</button>
-                                    <button class="btn btn-secondary" type="button">Delete</button>
-                                  </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
@@ -635,7 +649,7 @@
                     <div class="carousel-item">
                         <div class="multy-card">
                             <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
@@ -645,7 +659,7 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
@@ -655,7 +669,41 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <img src="\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="multy-card">
+                            <div class="card">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title text-center">Card title</h5>
+                                  <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Confirm</button>
+                                    <button class="btn btn-secondary" type="button">Delete</button>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <img src=".\img\userCarrd.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <h5 class="card-title text-center">Card title</h5>
                                   <div class="d-grid gap-2">
@@ -684,7 +732,7 @@
                   <div class="card">
                     <div class="row g-3">
                       <div class="col-md-2">
-                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                        <img src=".\img\userCarrd.jpg" alt="" class="col-form-label">
                       </div>
                       <div class="col-md-3">
                           <label class="form-label text-start fw-bold h4">User Name</label>
@@ -696,7 +744,7 @@
                     </div>
                     <div class="card-body">
                       <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
-                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
+                      <img src="./img/imgContent.jpg" class="img-fluid" alt="...">
                     </div>
                     <div class="card-footer">
                       <div class="btn-group col-12" role="group" aria-label="Basic example">
@@ -720,7 +768,7 @@
                   <div class="card">
                     <div class="row g-3">
                       <div class="col-md-2">
-                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
+                        <img src=".\img\userCarrd.jpg" alt="" class="col-form-label">
                       </div>
                       <div class="col-md-3">
                           <label class="form-label text-start fw-bold h4">User Name</label>
@@ -731,8 +779,8 @@
                       </div>
                     </div>
                     <div class="card-body">
-                      <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
-                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
+                      <p class="card-text">Love You Like A Love Song - Selena Gomez & The Scene</p>
+                      <video controls src="./videos/[Lyrics+Vietsub] Love You Like A Love Song - Selena Gomez & The Scene.mp4"></video>
                     </div>
                     <div class="card-footer">
                       <div class="btn-group col-12" role="group" aria-label="Basic example">
@@ -748,42 +796,6 @@
                           <i class="fa-solid fa-share"></i>
                           share
                       </button>
-                      </div>
-                    </div>
-                    <div class="fb-comments" data-href="http://127.0.0.1:5500/index.html" data-width="100%" data-numposts="1"></div>
-                  </div>
-                  <!-- bài viết 3 -->
-                  <div class="card">
-                    <div class="row g-3">
-                      <div class="col-md-2">
-                        <img src="\img\userCarrd.jpg" alt="" class="col-form-label">
-                      </div>
-                      <div class="col-md-3">
-                          <label class="form-label text-start fw-bold h4">User Name</label>
-                          <span class="badge bg-secondary">
-                            <i class="fa-solid fa-earth-asia"></i>
-                             1h
-                          </span>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <p class="card-text">đây là một bài viết mẫu không có nội dung gì đặc biệt đâu vì nó là bài mẫu mà... haha!!</p>
-                      <img src="/img/imgContent.jpg" class="img-fluid" alt="...">
-                    </div>
-                    <div class="card-footer">
-                      <div class="btn-group col-12" role="group" aria-label="Basic example">
-                        <button onclick="document.getElementById('like-3').style.color = 'blue'" type="button" class="btn btn-light" id="like-3">
-                          <i class="fa-solid fa-thumbs-up"></i>
-                          like
-                        </button>
-                        <button type="button" class="btn btn-light">
-                            <i class="fa-solid fa-comment"></i>
-                            comment
-                        </button>
-                        <button type="button" class="btn btn-light">
-                            <i class="fa-solid fa-share"></i>
-                            share
-                        </button>
                       </div>
                     </div>
                     <div class="fb-comments" data-href="http://127.0.0.1:5500/index.html" data-width="100%" data-numposts="1"></div>
@@ -813,49 +825,48 @@
                     <a href="#" class="btn btn-primary">Hủy</a>
                   </div>
                 </div>
-                <div class="friend-list2">
+                <div class="friend-list2" id="friend-list2">
                   <button class="kttt">
                     <div class="krr">
-                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <img src="./img/userCarrd.jpg" alt="">
                       <p>user name</p>
                     </div>
                   </button> <button class="kttt">
                     <div class="krr">
-                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <img src="./img/userCarrd.jpg" alt="">
                       <p>user name</p>
                     </div>
                   </button>
                   <button class="kttt">
                     <div class="krr">
-                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <img src="./img/userCarrd.jpg" alt="">
                       <p>user name</p>
                     </div>
                   </button>
                   <button class="kttt">
                     <div class="krr">
-                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <img src="./img/userCarrd.jpg" alt="">
                       <p>user name</p>
                     </div>
                   </button>
                   <button class="kttt">
                     <div class="krr">
-                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <img src="./img/userCarrd.jpg" alt="">
                       <p>user name</p>
                     </div>
                   </button>
                   <button class="kttt">
                     <div class="krr">
-                      <img src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/275493429_636929237408124_546325007912076054_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=Ilavoi2KB3wAX9ymsIV&_nc_ht=scontent.fhan14-2.fna&oh=00_AT8RGGjwK3VrmA5OOIe3X9HcW78ppwjEctKDRk_lz31D0Q&oe=62E8FFF6" alt="">
+                      <img src="./img/userCarrd.jpg" alt="">
                       <p>user name</p>
                     </div>
                   </button>
-                  
               </div>
             </div>
         </div>
     </div>
 
-    <script src="/css/index.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
