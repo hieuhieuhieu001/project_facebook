@@ -1155,137 +1155,93 @@ shortcuts
     left: 75%;
     top: 60px;
     bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .banner{
+    width: 110%;
+    margin-left: -5%;
+    list-style-type: none;
+}
+.banner__card{
+    width: 90%;
+    height: 5em;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px #adadad;
+    margin-top: 0.5em;
+    display: flex;
+}
+.banner__card >img{
+    width: 40%;
+    height: 100%;
+    border-radius: 10px;
+}
+.banner__card:hover{
+    background-color: #d1d1d1;
+}
+.banner__card > p{
+    margin-top: 1/2;
+    margin:auto;
+    font-weight: bold;
+}
+.friend{
+    list-style-type: none;
     width: 100%;
-    position: absolute;
-    top: 3%;
-    left: 0;
-    right: 0;
-    bottom: 75%;
+    margin-top: 1em;
+    margin-left: -5%;
 }
-.banner1{
-    width: 90%;
-    position: absolute;
-    top: 0;
-    left: 5%;
-    right: 5%;
-    bottom: 53%;
-    border: none;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 10px #adadad;
-}
-.banner1 >img{
-    width: 40%;
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.banner1 > p{
-    width: 60%;
-    position: absolute;
-    top: 35%;
-    left: 40%;
-}
-.banner1:hover{
-    background-color: #d1d1d1;
-}
-.banner2{
-    width: 90%;
-    position: absolute;
-    top: 53%;
-    left: 5%;
-    right: 5%;
-    bottom: 0;
-    border: none;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 10px #adadad;
-}
-.banner2 >img{
-    width: 40%;
-    height: 100%;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.banner2 > p{
-    width: 60%;
-    position: absolute;
-    top: 35%;
-    left: 40%;
-}
-.banner2:hover{
-    background-color: #d1d1d1;
-}
-.friend-card{
-    width: 90%;
-    height: 17%;
+.friend__card{
+    list-style-type: none;
+    margin: auto;
+    padding: 0.5em;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px #adadad;
-    position: absolute;
-    top: 27%;
-    left: 5%;
-    right: 5%;
 } 
 .friend-card:hover{
     background-color: #d1d1d1;
 }
-.friend-card-header{
-    position: absolute;
-    top: 10%;
-    left: 25%;
-    right: 30%;
-}
-.friend-card > img{
-    width: 20%;
+.friend__card-header{
+    display: flex;
+} 
+.friend__card-header > img{
+    width: 25%;
     height: auto;
     border-radius: 50%;
-    position: absolute;
-    top: 10%;
-    left: 2%;
-    right: 50%;
-} 
-.friend-card > .friend-card-header > p{
+}    
+.card-header-text{
+    list-style-type: none;
     font-size: 14px;
     font-weight: bold;
-}                                                      
-.friend-card > .friend-card-body{
-    position: absolute;
-    top: 65%;
-    left: 45%;
-    right: 0;
-    bottom: 0;
+}                                                  
+.friend__card-footer{
+    margin-top: -10%;
+    margin-left: 35%;
 }
 .friend-list2{
-    width: 100%;
-    position: absolute;
-    top: 45%;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    width: 110%;
+    list-style-type: none;
+    margin-left: -10%;
+    display: none;
 }
 .kttt{
     width: 90%;
-    height: 15%;
+    height: 3em;
     border: none;
     border-radius: 10px;
-    margin-top: 1%;
+    margin-top: 0.5em;
     margin-left: 5%;
+    padding: 0.5em;
     background-color: white;
     box-shadow: 0 0 3px #adadad;
 }
 .krr > img{
-    width: 13%;
-    height: auto;
+    width: 15%;
     border-radius: 50%;
     margin-top: -2%;
-    margin-left: -80%;
+    margin-left: -85%;
 }
 .kttt:hover{
     background-color: gainsboro;
@@ -1295,4 +1251,27 @@ shortcuts
     font-weight: bold;
     margin-top: -13%;
     margin-left: 10%;
+}
+.btn-read-more2{
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 5%;
+    font-weight: bold;
+}
+.btn-read-more2:hover{
+    background-color: #d1d1d1
+}
+.btn-hide-more2{
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 5%;
+    font-weight: bold;
+    display: none;
+}
+.btn-hide-more2:hover{
+    background-color: #d1d1d1
 }

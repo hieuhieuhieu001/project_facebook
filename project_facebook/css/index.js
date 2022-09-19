@@ -50,4 +50,16 @@ function notification_bt_oppen(){
 function notification_bt_exit(){
     document.getElementById('notification').style.display='none';
 }
+// read more oppen
+function readmore2() {
+    document.getElementById('friend-list2').style.display='block';
+    document.getElementById('see-all').style.display='none';
+    document.getElementById('hide-more2').style.display='block';
+}
+// read more hide
+function hidemore2() {
+    document.getElementById('see-all').style.display='block';
+    document.getElementById('friend-list2').style.display='none';
+    document.getElementById('hide-more2').style.display='none';
+}
 // })
