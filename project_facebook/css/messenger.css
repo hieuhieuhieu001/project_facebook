@@ -12,7 +12,8 @@ body{
 /* đầu trang */
 .header{
     width: 100%;
-    height: 60px;
+    height: 3.5rem;
+    display: flex;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -24,46 +25,42 @@ body{
 /* search */
 .search-bar{
     width: 25%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    height: 100%;
+    display: flex;
 }
-.search-bar > .logo > img{
-   width: 70%;
-   height: auto;
-   position: absolute;
-   top: 5px;
-   left: 10px;
-}
-.search-bar > .logo{
+.logo{
     width: 20%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.search-bar > .search > input{
-    width: 65%;
+.logo > img{
+    width: 60%;
+    height: auto;
+}
+.search{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.search > input{
+    width: 80%;
+    height: 80%;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px;
     background-color: #f0f2f5;
-    position: absolute;
-    top: 10px;
-    left: 20%;
-    bottom: 10px;
 }
 /* nút điều khiển trang chủ */
 .home{
-    position: absolute;
-    top: 0;
-    left: 25%;
-    right: 25%;
-    bottom: 0;
+    width: 50%;
     display: flex;
 }
 .home > .bg-home{
     width: 20%;
+    display: flex;
+    align-items: center;
 }
 .home > .bg-home > button{
     width: 95%;
@@ -74,8 +71,6 @@ body{
     color: #65676b;
     font-size: 30px;
     background-color: white;
-    margin-top: 3%;
-    margin-left: 5%;
 }
 .home > .bg-home > button:hover{
     background-color: #f0f2f5;
@@ -86,27 +81,25 @@ body{
 /* user */
 .user{
     width: 25%;
-    position: absolute;
-    top: 0;
-    left: 75%;
-    right: 0;
-    bottom: 0;
     display: flex;
     justify-content: right;
+    margin-right: 1%;
 }
 .user > .bg-user{
     width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .user > .bg-user > button{
-    width: 95%;
-    height: 80%;
+    width: 3rem;
+    height: 3rem;
     text-align: center;
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     /* color: white; */
-    font-size: 30px;
+    font-size: 1.5em;
     background-color: #e4e6eb;
-    margin-top: 5px;
 }
 .user > .bg-user > button > img{
     width: 100%;
@@ -115,211 +108,6 @@ body{
 }
 .user > .bg-user > button:hover{
     background-color: #cbcbcb;
-}
-/* messenger navbar */
-#messenger{
-    width: 25%;
-    height: 500px;
-    border-radius: 10px;
-    background-color: white;
-    position: absolute;
-    top: 60px;
-    left: 75%;
-    right: 0;
-    display: none;
-    box-shadow: 0px 0px 20px #adadad;
-}
-.messenger-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 80%;
-}
-.messenger-txtHeader{
-    width: 50%;
-    /* color: white; */
-    font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    left: 5%;
-}
-.messenger-btIcon{
-    width: 50%;
-    position: absolute;
-    top: 1%;
-    left: 50%;
-}
-.messenger-btIcon > button{
-    width: 20%;
-    height: 35px;
-    font-size: 20px;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-}
-.messenger-btIcon > button:hover{
-    background-color: #f0f2f5;
-}
-.messenger-search{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-}
-.messenger-search > input{
-    width: 90%;
-    border: none;
-    border-radius: 30px;
-    position: absolute;
-    top: 0;
-    left: 5%;
-    right: 5%;
-    background-color: #f0f2f5;
-}
-.messenger-foodter{
-    position: absolute;
-    top: 20%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-.messenger{
-    width: 90%;
-    height: 15%;
-    border-radius: 10px;
-    position: absolute;
-    top: 0;
-    left: 5%;
-    right: 5%;
-}
-.messenger:hover {
-    background-color: #d1d1d1;
-}
-.messenger:hover .messenger-box-menu{
-    display: block;
-}
-.messenger-box-icon{
-    width: 25%;
-    position: absolute;
-    top: 5%;
-    left: 2%;
-}
-.messenger-box-icon > img{
-    width: 70%;
-    height: auto;
-    border-radius: 50%;
-}
-.messenger-box-name{
-    font-weight: bold;
-    color: #606770;
-    width: 60%;
-    position: absolute;
-    top:0;
-    left: 25%;
-}
-.messenger-box-menu{
-    width: 15%;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 85%;
-    right: 0;
-    bottom: 0;
-}
-.messenger-box-menu > button{
-    width: 77%;
-    font-size: 24px;
-    color: #676d76;
-    border: none;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    top: 15%;
-}
-.messenger-box-menu > button:hover{
-    background-color: #cccccc;
-}
-/* messenger box 1 */
-.messenger1{
-    width: 90%;
-    height: 15%;
-    border-radius: 10px;
-    position: absolute;
-    top: 16%;
-    left: 5%;
-    right: 5%;
-}
-.messenger1:hover {
-    background-color: #d1d1d1;
-}
-.messenger1:hover .messenger-box-menu{
-    display: block;
-}
-/* messenger box2 */
-.messenger2{
-    width: 90%;
-    height: 15%;
-    border-radius: 10px;
-    position: absolute;
-    top: 32%;
-    left: 5%;
-    right: 5%;
-}
-.messenger2:hover {
-    background-color: #d1d1d1;
-}
-.messenger2:hover .messenger-box-menu{
-    display: block;
-}
-/* messenger box3 */
-.messenger3{
-    width: 90%;
-    height: 15%;
-    border-radius: 10px;
-    position: absolute;
-    top: 48%;
-    left: 5%;
-    right: 5%;
-}
-.messenger3:hover {
-    background-color: #d1d1d1;
-}
-.messenger3:hover .messenger-box-menu{
-    display: block;
-}
-/* messenger box4 */
-.messenger4{
-    width: 90%;
-    height: 15%;
-    border-radius: 10px;
-    position: absolute;
-    top: 64%;
-    left: 5%;
-    right: 5%;
-}
-.messenger4:hover {
-    background-color: #d1d1d1;
-}
-.messenger4:hover .messenger-box-menu{
-    display: block;
-}
-/* messenger box5 */
-.messenger5{
-    width: 90%;
-    height: 15%;
-    border-radius: 10px;
-    position: absolute;
-    top: 80%;
-    left: 5%;
-    right: 5%;
-}
-.messenger5:hover {
-    background-color:#d1d1d1;
-}
-.messenger5:hover .messenger-box-menu{
-    display: block;
 }
 /* user box */
 .main-user-box{
@@ -656,65 +444,16 @@ body{
     margin-top: 3%;
 }
 /* border */
-#main{
-    width: 100%;
-    position: absolute;
-}
 /* NAV trái */
-#nav1{
+.nav1{
     width: 25%;
     padding-top: 10px;
     background-color: white;
     position: fixed;
-    top: 60px;
+    top: 3.5rem;
     left: 0;
     bottom: 0;
     overflow-y: scroll;
-}
-.messenger-header1{
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 75%;
-    bottom: 77%;
-    background-color: white;
-    border-bottom: 1px solid #676d76;
-}
-.messenger-btIcon1{
-    width: 50%;
-    position: absolute;
-    top: 5%;
-    left: 60%;
-}
-.messenger-btIcon1 > button{
-    width: 20%;
-    height: 35px;
-    font-size: 20px;
-    color: #606770;
-    background-color: white;
-    border: none;
-    border-radius: 50%;
-}
-.messenger-btIcon1 > button:hover{
-    background-color: #f0f2f5;
-}
-.messenger-search1{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-}
-.messenger-search1 > input{
-    width: 90%;
-    height: 35px;
-    border: none;
-    border-radius: 30px;
-    position: absolute;
-    top: 60%;
-    left: 5%;
-    right: 5%;
-    bottom: 0%;
-    background-color: #f0f2f5;
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -725,52 +464,81 @@ body{
     background-color: grey;
     border-radius: 5px;
 }
+.messenger-header{
+    width: 100%;
+    height: 7em;
+    background-color: white;
+    border-bottom: 1px solid #676d76;
+}
+.messenger-txtHeader{
+    font-size: 2em;
+    font-weight: bold;
+    width: 50%;
+    float: left;
+    padding-left: 1rem;
+}
+.messenger-btIcon1{
+    width: 50%;
+    text-align: right;
+    float: left;
+}
+.messenger-btIcon1 > button{
+    width: 2em;
+    height: 2em;
+    font-size: 1.5em;
+    color: #606770;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+}
+.messenger-btIcon1 > button:hover{
+    background-color: #f0f2f5;
+}
+.messenger-search1 > input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #f0f2f5;
+    margin-left: 5%;
+}
+.messenger--list{
+    width: 100%;
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 0.5rem;
+}
+.messenger--list > li{
+    width: 95%;
+    height: 4rem;
+    border-radius: 10px;
+    margin-left: 2.5%;
+}
+.messenger--list > li:hover{
+    background-color: #d1d1d1;
+}
+.text-icon{
+    width: 100%;
+    margin-left: 1em;
+}
 .text-icon > label  a{
     text-decoration: none;
     color: black;
 }
-.avatar{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-top: 5px;
-}
-.icon{
-    height: 36px;
-    width: 36px;
-}
-.icon > ul{
-    list-style-type: none;
-    margin-top: 120px;
-}
-.icon > ul > li{
-    width: 300px;
-    height: 60px;
-    border-radius: 10px;
-}
-.icon > ul > li:hover{
-    background-color: #d1d1d1;
-}
 .text-icon > a{
     color: black;
     text-decoration: none;
-    padding-left: 35px;
     font-weight: bold;
     text-align: left;
 }
 .messengerbox{
     display: flex;
-    /*width: 36px;*/
-    /*height: 36px;*/
-    padding-top: 10px;
+    padding: 0.5em;
 }
 /* messenger main */
 .messenger-main{
     width: 75%;
     background-color: white;
-    position: absolute;
-    left: 25%;
-    right: 0;
 }
 /* content */
 /* .content{
